@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
+gem 'paperclip'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
