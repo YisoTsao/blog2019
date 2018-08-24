@@ -1,0 +1,26 @@
+<header class="indexhead">
+  <div class="container-fluid" >
+    <div class="intro-text">
+      <div class="intro-heading text-center" >Gary Blog</div>
+    </div>
+  </div>  
+</header>
+
+
+<div class="row" style="padding-top: 40px;">
+  <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col-md-offset-2" data-aos="fade-right" >
+    <div class="card text-center ">
+<h2><%= @post.title %></h2> 
+<p><%= @post.content.html_safe %></p> 
+<br>
+<h5><span class="glyphicon glyphicon-time"><%= @post.created_at %> 發佈. </span></h5>
+<div>
+</div>
+
+<%= link_to "edit", edit_post_path(@post),  class: 'btn btn-warning', :style => 'text-decoration:none;'  %>
+<%= link_to("Delete", @post,  method: :delete, data: { confirm: "Are you sure?" } ,  class: 'btn btn-danger', :style => 'text-decoration:none;' )%>
+	</div>
+  </div>
+</div>
+
+<br><br><br><br>

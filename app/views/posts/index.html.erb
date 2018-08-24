@@ -1,0 +1,43 @@
+<header class="indexhead">
+  <div class="container-fluid" >
+    <div class="intro-text">
+      <div class="intro-heading text-center" >Gary Blog</div>
+    </div>
+  </div>  
+</header>
+
+<br>
+<div>
+<%= link_to "發表新文章", new_post_path,  class: 'btn btn-info', :style => 'margin: 10px; text-decoration:none;' %>
+</div>
+
+<% @posts.each do |post| %>
+<div class="blog">
+  <div class="container">
+    <div class="row">
+      <div class=" text-center">  
+        <div class="blogdesc"><span class="ion-minus"></span><%= post.title %><span class="ion-minus"></span></div>
+      	</div> 
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+  
+    <div class="col-lg-8 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1" data-aos="fade-right">
+	  <div class="card text-center">
+        <%= image_tag post.image.thumb.url  if post.image? %>
+        <div class="card-block">
+            <a ><%= link_to "Read More" ,post , class: 'btn btn-primary' %></a>
+            </div>
+            <br>
+            <%= link_to "edit", edit_post_path(post),  class: 'btn btn-warning', :style => 'text-decoration:none;'  %>
+			<%= link_to("Delete", post,  method: :delete, data: { confirm: "Are you sure?" } ,  class: 'btn btn-danger', :style => 'text-decoration:none;' )%>
+         </div>
+    </div>
+</div>
+	<br><br>
+
+<% end %>
+
+

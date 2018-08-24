@@ -89,7 +89,7 @@ header.indexhead{
 }
 
 
-
+//
 .blogdesc {
     color: #4C4C4C;
     word-spacing: 5px;
@@ -108,10 +108,6 @@ section{
     padding:0px 10px;
 }
 
-//.blog{
-//	background-color:#f6f6f6;
-//}
-
 .blog .card {
     background-color: #FFF;
     border: 1px solid #eceaea;
@@ -127,3 +123,8 @@ section{
 	margin-top: -10%;
 }
 
+
+// blog show bottom
+div.col-md-8.col-md-offset-2 {
+    margin-bottom: 100px;
+}
