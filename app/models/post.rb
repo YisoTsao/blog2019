@@ -8,7 +8,7 @@ class Post < ApplicationRecord
 
   validates_attachment :image
 
-	 mount_uploader :image, ImageUploader
+  mount_uploader :image, ImageUploader
 
   
 end

@@ -1,44 +1,37 @@
-
 <div class="col-md-8  col-md-offset-2" style="padding-top: 80px;">
-<%= form_for @post  do |t| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<!-- <noscript> -->
-<div class="alert alert-info">
-	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-	<span><strong>Hi ! </strong> 分享些什麼吧!.</span>
-</div>
-<!-- </noscript> -->
-
-
-
-<%= t.submit "提交文章", class: 'btn btn-info', style: 'margin: 10px;' %>
-
-<div class="panel panel-default">
-  <div class="panel-heading"><h3 class="panel-title"><strong>建立文章</strong></h3></div>
-    <div class="panel-body">
-  	  <div class="form-group">
-      <%= t.label  :標題 %>
-      <%= t.text_field :title , class: "form-control", id: "exampleInputEmail1", placeholder: "隨便打什麼都好"%></div>
-      <%= t.label :標題圖片 %><br>
-      <%= t.file_field :image %>
-
-  	</div>
-</div>
-    <div class="panel panel-default">
-  <div class="panel-heading"><h3 class="panel-title"><strong>文章內容</strong></h3></div>
-	
+	<%= form_for @post  do |t| %>
+	<% if @post.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+	<!-- <noscript> -->
+	<div class="alert alert-info">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+		<span><strong>Hi ! </strong> 分享些什麼吧!.</span>
+	</div>
+	<!-- </noscript> -->
+	<%= t.submit "提交文章", class: 'btn btn-info', style: 'margin: 10px;' %>
+	<div class="panel panel-default">
+		<div class="panel-heading"><h3 class="panel-title"><strong>建立文章</strong></h3></div>
+		<div class="panel-body">
+			<div class="form-group">
+				<%= t.label  :標題 %>
+			<%= t.text_field :title , class: "form-control", id: "exampleInputEmail1", placeholder: "隨便打什麼都好"%></div>
+			<%= t.label :標題圖片 %><br>
+			<%= t.file_field :image %>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading"><h3 class="panel-title"><strong>文章內容</strong></h3></div>
+		
 		<%= t.cktext_area :content %>
 	</div>
-<!-- <div class="fb-comments" data-href="https://ide.c9.io/gary525/garyblog" data-numposts="5"></div> -->
-<% end %>
+	<!-- <div class="fb-comments" data-href="https://ide.c9.io/gary525/garyblog" data-numposts="5"></div> -->
+	<% end %>
 </div>
