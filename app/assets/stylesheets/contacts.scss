@@ -1,0 +1,220 @@
+// Place all the styles related to the contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#black-color{
+	background-color: #000;
+}
+#font14px{
+	font-size: 14px;
+}
+
+#font20px{
+	font-size: 20px;
+}
+
+.dropdown-toggle{
+	font-size:20px;
+}
+
+#bs-example-navbar-collapse-1{
+	
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+.navbar-fixed-top{
+  border-width: 0 0 0px;
+}
+.contactcircle {
+    border-radius: 50% !important;
+    width: 180px;
+    height: 180px;
+    border: 5px solid rgba(255, 255, 255, 0.0);
+}
+
+#team {
+    background-color: #cfcdd2;
+}
+
+.section-heading.text-uppercase {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.62);
+}
+
+
+.team-member {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 225px;
+  height: 225px;
+  border: 7px solid #fff;
+}
+
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.team-member p {
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+
+header.masthead {
+  text-align: center;
+  color: #FFF;
+  background-image: url("../assets/header-bg.jpg");
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+header.masthead .intro-text {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+
+
+@media (min-width: 768px) {
+
+  header.masthead .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+  header.masthead .intro-text .intro-lead-in {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+  }
+}
+
+
+
+
+ body {
+        background: #2B3238;
+    }
+    
+   .contactform h1 { 
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  }
+  
+  div.contactform{
+    background-color: rgba(3, 158, 149, 0.87);
+  }
+
+
+    .loginbox {
+        width: 350px;
+        margin: auto;
+        height: 200px;
+        margin-top: 50px;
+    }
+    
+    .loginbox input {
+        border: none;
+        background: #fff;
+        font-family: Lato;
+        font-weight: 700;
+        display: block;
+        height: 40px;
+        outline: none;
+        width: 100%;
+        margin: 2px;
+        padding: 6px 12px 6px 12px;
+    }
+    .loginbox input[type="text"] {
+        border-radius: 5px 5px 0px 0px;
+    }
+    
+    .loginbox input[type="password"] {
+        border-radius: 0px 0px 5px 5px;
+    }
+    
+    .loginbox  input[type="submit"] {
+    background: #EA4C89;
+    border-radius: 10px;
+    width: 260px;
+    margin-left: 45px;   
+    border: solid 0px;
+  }
+
+
+    a.forgot_link {
+        color: #666;
+        text-decoration: none;
+        font-size: 11px;
+        position: relative;
+        left: 193px;
+        top: -31px;
+    }
+    a.forgot_link:hover {
+        text-decoration:none;
+        color: #111;
+        
+    }
+    
+    .loginbox button {
+        width: 100%;
+        border-radius: 5px;
+        background: #EA4C89;
+        text-decoration: center;
+        border: none;
+        color: #ffffff;
+        margin-top: -5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        outline: none;
+        font-size: 16px;
+        border-bottom: 3px solid #E8377E;
+        cursor: pointer;
+    }
+    .separtor {
+        width: 100%;
+        height: 1px;
+        background: #fff;
+    }
+    
+    .separtor i {
+        width: 95%;
+        margin: auto;
+        height: 1px;
+        display: block;
+        background: #d1d1d1;
+    }
+.editcolor{
+background: #74d4d2;
+}
+  

@@ -62,6 +62,7 @@ group :development do
   gem 'omniauth-twitter'
   gem 'omniauth-google-oauth2'
   gem 'koala' # 可以將錯誤的 session 刪掉避免註冊失敗
+  gem 'mail_form', '~> 1.7'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
