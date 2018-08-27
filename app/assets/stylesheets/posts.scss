@@ -8,6 +8,7 @@
     padding: 14px 14px 0;
     overflow:hidden;
     background-color:rgba(255,255,255,.8);
+    margin-right: 15px;
 }
 #login-dp .help-block{
     font-size:12px    
@@ -131,17 +132,16 @@ div.col-md-8.col-md-offset-2 {
 
 // login image 
 .mx-auto.rounded-circle {
-    border-radius: 50% !important;
-    width: 55px;
-	height: 55px;
-	border: 5.0px solid rgba(114, 225, 255, 0.97);
+  border-radius: 50% !important;
+  width: 55px;
+  height: 55px;
+  border: 2.0px solid rgba(134, 65, 255, 0.97);
 	margin-left: 80px;
 }
 
 
-        .col-md-offset-4 {
-            margin-left: 33.3333333333%;
-            margin-top: 120px;
-            margin-bottom: 100px;
-        }
-    
+.col-md-offset-4 {
+    margin-left: 33.3333333333%;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
