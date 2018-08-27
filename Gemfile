@@ -45,8 +45,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'koala' # 可以將錯誤的 session 刪掉避免註冊失敗
-gem 'mail_form', '~> 1.7'
-
+gem 'pry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

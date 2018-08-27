@@ -34,7 +34,7 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = config_for(:email).symbolize_keys
-  config.action_mailer.default_url_options = { host: "http://garytsao-qtreport.tk/" }
+  config.action_mailer.default_url_options = { host: "http://garytsao-rails.tk/" }
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 

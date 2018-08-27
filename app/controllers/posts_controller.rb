@@ -33,7 +33,7 @@ class PostsController < ApplicationController
         content: @post.content
         }.to_json
       end 
-  end
+    end
   end
 
   def edit
