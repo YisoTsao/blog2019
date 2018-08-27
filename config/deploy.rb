@@ -4,6 +4,9 @@ lock "~> 3.10.1"
 set :application, "garybon"
 set :repo_url, "git@gitlab.com:YisoTsao/garyblog.git"
 
+append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+
 #Deploy to Lindoe  
  set :deploy_to, "/home/gary/linodegarybon"
 
@@ -24,10 +27,10 @@ set :repo_url, "git@gitlab.com:YisoTsao/garyblog.git"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/secrets.yml"
+# append :linked_files, "config/database.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
