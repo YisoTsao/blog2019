@@ -18,3 +18,8 @@
 
 .byebug_history
 public/uploads
+
+config/database.yml 
+config/secrets.yml 
+config/email.yml
+config/environment_variables.yml
