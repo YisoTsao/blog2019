@@ -74,11 +74,6 @@
                     <div class="form-group">
                       <%= link_to "登出", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-block" %>
                     </div>
-
-                    <div class="form-group">
-                      <a id="fbLogout" onclick="fbLogout()" class="btn btn-primary btn-block">登出臉書帳號</a>
-                    </div>
-
                       <label>
                         <%= f.check_box :remember_me %> keep me logged-in.
                       </label>
@@ -92,9 +87,6 @@
                 <% elsif  %>
                 <div class="bottom text-center">
                   <% end %>
-                  <div><%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %></div>
-                    
-                    
                     <div class="checkbox">
                 </div>
               </div>
