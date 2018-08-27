@@ -4,6 +4,11 @@ class PostsController < ApplicationController
 
   def index
   	@posts = Post.all
+
+    respond_to do |format|
+      format.html 
+      format.json{ render json: @posts }.to_json
+    end
   end
 
   def new
@@ -20,6 +25,15 @@ class PostsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html 
+      format.json do
+        render json: {
+        title: @post.title,
+        content: @post.content
+        }.to_json
+      end 
+  end
   end
 
   def edit

@@ -10,14 +10,6 @@
 	<%= link_to "發表新文章", new_post_path,  class: 'btn btn-info', :style => 'margin: 10px; text-decoration:none;' %>
 </div>
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<span id="fbLogout" onclick="fbLogout()"><a class="fb_button fb_button_medium"><span class="fb_button_text">Logout</span></a></span>
-
-<div id="status">
-</div>
-
 <% @posts.each do |post| %>
 <div class="blog">
 	<div class="container">
