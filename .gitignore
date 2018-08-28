@@ -18,6 +18,7 @@
 
 .byebug_history
 public/uploads
+*/.DS_Store
 
 config/database.yml 
 config/secrets.yml 

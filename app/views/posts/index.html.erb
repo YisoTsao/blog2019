@@ -10,6 +10,8 @@
 	<%= link_to "發表新文章", new_post_path,  class: 'btn btn-info', :style => 'margin: 10px; text-decoration:none;' %>
 </div>
 
+<p><%= link_to 'Confirm my account', edit_user_registration_path %></p>
+
 <% @posts.each do |post| %>
 <div class="blog">
 	<div class="container">
@@ -29,8 +31,10 @@
 				<a ><%= link_to "Read More" ,post , class: 'btn btn-primary' %></a>
 			</div>
 			<br>
+			<% if current_user %>
 			<%= link_to "edit", edit_post_path(post),  class: 'btn btn-warning', :style => 'text-decoration:none;'  %>
 			<%= link_to("Delete", post,  method: :delete, data: { confirm: "Are you sure?" } ,  class: 'btn btn-danger', :style => 'text-decoration:none;' )%>
+			<% end %>
 		</div>
 	</div>
 </div>
