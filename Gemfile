@@ -68,7 +68,6 @@ group :development do
   gem 'omniauth-twitter'
   gem 'omniauth-google-oauth2'
   gem 'koala' # 可以將錯誤的 session 刪掉避免註冊失敗
-  gem 'mail_form', '~> 1.7'
   gem 'capistrano', '~> 3.10', '>= 3.10.1'
   gem 'capistrano-rails', '~> 1.3', '>= 1.3.1'
   gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
