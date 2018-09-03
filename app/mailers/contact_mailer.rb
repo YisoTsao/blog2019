@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-default from: "'Gary'yiso05255@gmail.com"
+default from: "'Gary'gary525t@gmail.com"
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
