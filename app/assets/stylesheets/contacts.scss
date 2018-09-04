@@ -217,4 +217,13 @@ header.masthead .intro-text {
 .editcolor{
 background: #74d4d2;
 }
-  
+
+
+@media all {
+    div.container-fluid {
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

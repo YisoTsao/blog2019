@@ -17,3 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+@media screen and (max-width: 890px) {
+  .navbar-text.hidinguser {
+    display: none;
+  }
+  img.mx-auto.rounded-circle{
+	margin-left: 20px;
+  }
+}
