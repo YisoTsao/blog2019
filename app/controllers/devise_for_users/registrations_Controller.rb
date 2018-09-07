@@ -5,9 +5,9 @@ class DeviseForUsers::RegistrationsController < Devise::RegistrationsController
  
   def reg_sign_up_params
     devise_parameter_sanitizer.permit(:sign_up, keys: [:account,:name,:click_id,:phone,:agree_terms, :id_number,
-    :birth_day, :country_code, :qq, :webchat])
+    :birth_day, :country_code, :qq, :webchat, :image ])
     #add below that can edit user profile
     devise_parameter_sanitizer.permit(:account_update, keys: [:account,:name,:click_id,:phone,:agree_terms, :id_number,
-    :birth_day, :country_code, :qq, :webchat])
+    :birth_day, :country_code, :qq, :webchat, :image ])
   end
 end
