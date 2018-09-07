@@ -1,29 +1,22 @@
 <%= form_with(model: contact, local: true) do |form| %>
-  <% if contact.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
-      <ul>
-      <% contact.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="loginbox">
-    <%= form.text_field :name, id: :contact_name , :type => 'text'  , :placeholder => 'name', :autofocus => true, :required => true  %>
-    
-
+<% if contact.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+  <ul>
+    <% contact.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="loginbox">
+  <%= form.text_field :name, id: :contact_name , :type => 'text'  , :placeholder => 'name', :autofocus => true, :required => true  %>
   <div type="e-mail">
     <%= form.text_field :email, id: :contact_email, :type => 'email'  , :placeholder => 'mail', :autofocus => true, :required => true  %>
   </div>
-
-<br>
-
-<div>
-<%= form.submit '送出'  %>  
-</div>
- 
-<% end %>
+  <br>
+  <div>
+    <%= form.submit '送出'  %>
+  </div>
+  <% end %>
 </div>
