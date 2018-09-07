@@ -1,5 +1,5 @@
 <header class="indexhead">
-	<div class="container-fluid" >
+	<div class="container-fluid">
 		<div class="intro-text">
 			<div class="intro-heading text-center" >Gary Blog</div>
 		</div>
@@ -11,12 +11,16 @@
 			<h2><%= @post.title %></h2>
 			<p><%= @post.content.html_safe %></p>
 			<br>
-			<h5><span class="glyphicon glyphicon-time"><%= @post.created_at %> 發佈. </span></h5>
-			<% if current_user %>
+			<h5><span class="glyphicon glyphicon-time"><%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %>發佈. </span></h5>
+			<% if current_user && current_user == @post.user %>
 			<%= link_to "edit", edit_post_path(@post),  class: 'btn btn-warning', :style => 'text-decoration:none;'  %>
 			<%= link_to("Delete", @post,  method: :delete, data: { confirm: "Are you sure?" } ,  class: 'btn btn-danger', :style => 'text-decoration:none;' )%>
 			<% end %>
+			<!-- <%= link_to "發表評論", new_post_comment_path(@post) %> -->
 		</div>
 	</div>
 </div>
+<h2 class="section-heading text-uppercase"></h2>
+<%= render 'comments/comment' %>
 <br><br><br><br>
+<!-- <%= render 'disqus' %> -->

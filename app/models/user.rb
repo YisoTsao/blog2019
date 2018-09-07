@@ -4,5 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
+
+  mount_uploader :image, ImageUploader
+
   validates_acceptance_of :agree_terms
+
+  has_many :posts,    dependent: :destroy
+  has_many :comments
 end

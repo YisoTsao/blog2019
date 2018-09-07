@@ -1,5 +1,5 @@
 <div class="col-md-8  col-md-offset-2" style="padding-top: 80px;">
-	<%= form_for @post  do |t| %>
+<%= form_for @post, html: { multipart: true }   do |t| %>
 	<% if @post.errors.any? %>
 	<div id="error_explanation">
 		<h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -19,21 +19,21 @@
 			<%= t.text_field :title , class: "form-control", id: "exampleInputEmail1", placeholder: "編輯什麼都好"%></div>
 			<%= t.label "標題圖片:" %>
 			<% if @post.image? %>
-			<%= link_to image_tag(@post.image.thumb_small.url), @post.image.url if @post.image? %><br>
-			<% elsif %>
-			<span class="label label-warning">請選擇標題圖片</span>
+			<%= link_to image_tag(@post.image.thumb_small.url), @post.image.url if @post.image? %>
+			<% else %>
+			<span class="label label-warning">尚未有標題圖片</span>
 			<% end %>
 			<%= t.file_field :image %>
+			<br>
+			<label>
+				<%= t.check_box :remove_image %>移除標題圖片
+			</label>
 		</div>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading"><h3 class="panel-title"><strong>編輯內容</strong></h3></div>
 		<%= t.cktext_area :content %>
 	</div>
-	<label>
-		<%= t.check_box :remove_image %>
-		Remove avatar
-	</label>
 	<!-- <div class="fb-comments" data-href="https://ide.c9.io/gary525/garyblog" data-numposts="5"></div> -->
 	<% end %>
 </div>

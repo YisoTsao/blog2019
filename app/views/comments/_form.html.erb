@@ -1,0 +1,28 @@
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+<div class="container-fluid text-center">
+	<div class="row">
+	<h2>目前已發表: <%= pluralize(@comments.count, "comment") %></h2>
+	<h3 class="col-sm-1"></h3>
+		<div class="col-sm-1">
+			<div class="thumbnail">
+				<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+			</div>
+		</div>
+		<div class="col-sm-9">
+			<div class="panel panel-default">
+				<div class="panel-heading text-center">
+				<% if signed_in?  %>
+					<strong><%= current_user.name %></strong> 
+					<% else %>
+					<strong>目前是個遊客</strong>
+					<% end %>
+				</div>
+				<div class="panel-body">發表評論:
+					<%= f.text_field :content %>
+				</div>
+			</div>
+			<%= f.submit "送出"%>
+			<% end %>
+		</div>
+	</div>
+</div>

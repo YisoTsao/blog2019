@@ -7,8 +7,11 @@ class Post < ApplicationRecord
   #     default_url:  ""# "/images/:style/missing.png"
 
   validates_attachment :image
+  validates_presence_of :title, :content
 
   mount_uploader :image, ImageUploader
 
+  has_many :comments, dependent: :destroy
+  belongs_to :user
   
 end
