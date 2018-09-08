@@ -5,7 +5,11 @@
 	<h3 class="col-sm-1"></h3>
 		<div class="col-sm-1">
 			<div class="thumbnail">
-				<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+			<% if current_user %>
+				<%= image_tag (current_user.image.thumb) %>
+			<% else %>
+				<img src="/assets/empty-user.png">
+			<% end %>
 			</div>
 		</div>
 		<div class="col-sm-9">
@@ -21,7 +25,7 @@
 					<%= f.text_field :content %>
 				</div>
 			</div>
-			<%= f.submit "送出"%>
+			<%= f.submit "送出" %>
 			<% end %>
 		</div>
 	</div>

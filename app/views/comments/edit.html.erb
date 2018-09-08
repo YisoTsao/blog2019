@@ -1,10 +1,15 @@
+<h1><br></h1>
 <%= form_for ([@post, @comment]) do |f| %>
 <div class="container">
 	<div class="row">
 	<h3 class="col-sm-offset-3">修改評論</h3>
 		<div class="col-sm-1">
 			<div class="thumbnail">
-				<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+			<% if current_user == @comment.user %>
+				<%= image_tag(current_user.image.thumb ) %>
+			<% else %>
+				<img src="/assets/empty-user.png">
+			<% end %>
 			</div>
 		</div>
 		<div class="col-sm-5">
@@ -13,10 +18,10 @@
 					<strong><%= current_user.name %></strong> <span class="text-muted">commented 5 days ago</span>
 				</div>
 				<div class="panel-body">
-					<%= f.text_area :content %>
+					<%= f.text_field :content %>
 				</div>
 			</div>
-			<%= f.submit %>
+			<%= f.submit "送出" %>
 			<% end %>
 		</div>
 	</div>
