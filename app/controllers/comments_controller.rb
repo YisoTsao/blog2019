@@ -12,6 +12,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       redirect_to post_path(@post)
+      flash[:success] = "已建立評論!"
   	else
   		render 'new'
   	end
@@ -20,12 +21,14 @@ class CommentsController < ApplicationController
 	def destroy
 	  @comment.destroy
 		redirect_to post_path(@post)
+    flash[:danger] = "已刪除評論!"
   end
 
 
   def update
   	if @comment.update(comment_params)
   		redirect_to post_path(@post)
+      flash[:info] = "已更新評論!"
   	else
       render 'edit'
     end
@@ -37,26 +40,26 @@ class CommentsController < ApplicationController
 
 private
 
-    def find_post
-      @post = Post.find(params[:post_id])
-    end
+  def find_post
+    @post = Post.find(params[:post_id])
+  end
 
-    def find_comment
-      @comment = @post.comments.find(params[:id])
-    end
+  def find_comment
+    @comment = @post.comments.find(params[:id])
+  end
 
-    # def find_user
-    #   @user = User.find(params[:user_id])
-    # end
+  # def find_user
+  #   @user = User.find(params[:user_id])
+  # end
 
-    def comment_owner
-      unless current_user.id == @comment.user_id
-        flash[:notice] = 'You shall not pass!'
-        redirect_to @post
-      end
+  def comment_owner
+    unless current_user.id == @comment.user_id
+      flash[:warning] = 'You shall not pass!'
+      redirect_to @post
     end
+  end
 
-    def comment_params
-      params.require(:comment).permit(:content)
-    end
+  def comment_params
+    params.require(:comment).permit(:content)
+  end
 end

@@ -23,6 +23,7 @@ class PostsController < ApplicationController
     # @post.user = current_user
 	  if @post.save
 			redirect_to @post
+      flash[:success] = "已建立文章!"
 	  else
 			render "new"
 	  end
@@ -47,6 +48,7 @@ class PostsController < ApplicationController
   def update
   	if @post.update_attributes(post_params)
 			redirect_to posts_path
+      flash[:info] = "已更新文章!"
 	  else
 		  render "edit"
 	  end
@@ -55,6 +57,7 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
 	  redirect_to posts_path
+    flash[:danger] = "已刪除文章!"
   end
 
   private

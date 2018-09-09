@@ -15,4 +15,5 @@
 //= require jquery3
 //= require bootstrap
 //= require ckeditor/init
+//= require bootstrap/alert
 //= require_tree .
