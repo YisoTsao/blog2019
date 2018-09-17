@@ -46,6 +46,9 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'koala' # 可以將錯誤的 session 刪掉避免註冊失敗
 gem 'pry'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+gem "paperclip"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

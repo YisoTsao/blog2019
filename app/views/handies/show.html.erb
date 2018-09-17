@@ -1,0 +1,305 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="padding-top: 50px;"><%= link_to 'Download PDF' , handy_url(format: "pdf"), class: 'btn btn-primary'%>
+</h1>
+<h1>Product Description </h1>
+
+<table style="width:50%;">
+  <tr>
+  <td id="desc" >Product Name:</td>
+  <td id="descline" ><%= @handy.prodname %></td>
+  </tr>
+  <tr>
+    <td id="desc" >Product P/N:</td>
+    <td id="descline" ><%= @handy.prodpn %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Firmware Version:</td>
+    <td id="descline"><%= @handy.fwvversion %></td>
+  </tr>
+   <tr>
+    <td id="desc" > Description:</td>
+    <td id="descline"><%= @handy.desc %></td>
+  </tr>
+   <tr>
+    <td id="desc" > Controller:</td>
+    <td id="descline"><%= @handy.solution %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Flash Type:</td>
+    <td id="descline"><%= @handy.ftype %></td>
+  </tr>
+   <tr>
+    <td id="desc" >PCB Version:</td>
+    <td id="descline"><%= @handy.pcbvers %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Qualification:</td>
+    <td id="descline"><%= @handy.qual %></td>
+  </tr>
+   <tr>
+    <td id="desc">Test Result:</td>
+    <td id="descline"><%= @handy.testres %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Explain:</td>
+    <td id="descline"><%= @handy.prodname %> <%= @handy.capacity %> <%= @handy.qual %> <%= @handy.solution %> <%=@handy.ftype %></td>
+  </tr>
+  </table>
+
+
+<h1>Product Description </h1>
+
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th id="indexbarcolor">Item</th>
+      <th id="indexbarcolor">Pccitem</th>
+      <th id="indexbarcolor">Receivedate</th>
+      <th id="indexbarcolor">Startdate</th>
+      <th id="indexbarcolor">Finishdate</th>
+      <th id="indexbarcolor">Solution</th>
+      <th id="indexbarcolor">Schedule</th>
+      <th id="indexbarcolor">Capacity</th>
+      <th id="indexbarcolor">Qual</th>
+      <th id="indexbarcolor">Read</th>
+      <th id="indexbarcolor">Write</th>
+      <th id="indexbarcolor">Owner</th>
+      <th id="indexbarcolor">Remark</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @handy.item %></td>
+        <td><%= @handy.pccitem %></td>
+        <td><%= @handy.receivedate  %></td>
+        <td><%= @handy.startdate %></td>
+        <td><%= @handy.finishdate %></td>
+        <td><%= @handy.solution %></td>
+        <td><%= @handy.schedule %></td>
+        <td><%= @handy.capacity %></td>
+        <td><%= @handy.qual %></td>
+        <td><%= @handy.read %></td>
+        <td><%= @handy.write %></td>
+        <td><%= @handy.owner %></td>
+        <td><%= @handy.remark %></td>
+</tr>
+</tbody>
+</table>
+
+<br>
+
+<h1>M/B Description </h1>
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th id="indexbarcolor">PC</th>
+      <th id="indexbarcolor">OS</th>
+      <th id="indexbarcolor">M/B</th>
+      <th id="indexbarcolor">Vendor</th>
+      <th id="indexbarcolor">Chip</th>
+      <th id="indexbarcolor">BIOS</th>
+      <th id="indexbarcolor">Basic Test</th>
+      <th id="indexbarcolor">LED</th>
+      <th id="indexbarcolor">Comp32</th>
+      <th id="indexbarcolor">Burnin</th>
+      <th id="indexbarcolor">FAT</th>
+      <th id="indexbarcolor">FAT32</th>
+      <th id="indexbarcolor">NTFS</th>
+      <th id="indexbarcolor">exFAT</th>
+      <th id="indexbarcolor">Result</th>
+      <th  id="indexbarcolor" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>1</th>
+        <td><%= @handy.pc1os %></td>
+        <td><%= @handy.pc1mb %></td>
+        <td><%= @handy.pc1vendor  %></td>
+        <td><%= @handy.pc1chip %></td>
+        <td><%= @handy.pc1bios %></td>
+        <td><%= @handy.pc1basic %></td>
+        <td><%= @handy.pc1led %></td>
+        <td><%= @handy.pc1comp32 %></td>
+        <td><%= @handy.pc1burnin %></td>
+        <td><%= @handy.pc1fat %></td>
+        <td><%= @handy.pc1fat32 %></td>
+        <td><%= @handy.pc1ntfs %></td>
+        <td><%= @handy.pc1exfat %></td>
+        <td><%= @handy.pc1result %></td>
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>2</th>
+        <td><%= @handy.pc2os %></td>
+        <td><%= @handy.pc2mb %></td>
+        <td><%= @handy.pc2vendor  %></td>
+        <td><%= @handy.pc2chip %></td>
+        <td><%= @handy.pc2bios %></td>
+        <td><%= @handy.pc2basic %></td>
+        <td><%= @handy.pc2led %></td>
+        <td><%= @handy.pc2comp32 %></td>
+        <td><%= @handy.pc2burnin %></td>
+        <td><%= @handy.pc2fat %></td>
+        <td><%= @handy.pc2fat32 %></td>
+        <td><%= @handy.pc2ntfs %></td>
+        <td><%= @handy.pc2exfat %></td>
+        <td><%= @handy.pc2result %></td>
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>3</th>
+        <td><%= @handy.pc3os %></td>
+        <td><%= @handy.pc3mb %></td>
+        <td><%= @handy.pc3vendor  %></td>
+        <td><%= @handy.pc3chip %></td>
+        <td><%= @handy.pc3bios %></td>
+        <td><%= @handy.pc3basic %></td>
+        <td><%= @handy.pc3led %></td>
+        <td><%= @handy.pc3comp32 %></td>
+        <td><%= @handy.pc3burnin %></td>
+        <td><%= @handy.pc3fat %></td>
+        <td><%= @handy.pc3fat32 %></td>
+        <td><%= @handy.pc3ntfs %></td>
+        <td><%= @handy.pc3exfat %></td>
+        <td><%= @handy.pc3result %></td>
+</tr>
+</tbody>
+
+
+<tbody>
+      <tr>
+        <td>4</th>
+        <td><%= @handy.pc4os %></td>
+        <td><%= @handy.pc4mb %></td>
+        <td><%= @handy.pc4vendor  %></td>
+        <td><%= @handy.pc4chip %></td>
+        <td><%= @handy.pc4bios %></td>
+        <td><%= @handy.pc4basic %></td>
+        <td><%= @handy.pc4led %></td>
+        <td></td>
+        <td></td>
+        <td><%= @handy.pc4ext34  %>(ext3,4)</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%= @handy.pc4result %></td>
+</tr>
+</tbody>
+
+<tbody>
+      <tr>
+        <td>5</th>
+        <td><%= @handy.pc5os %></td>
+        <td><%= @handy.pc5mb %></td>
+        <td><%= @handy.pc5vendor  %></td>
+        <td><%= @handy.pc5chip %></td>
+        <td><%= @handy.pc5bios %></td>
+        <td><%= @handy.pc5basic %></td>
+        <td><%= @handy.pc5led %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%= @handy.pc5result %></td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- 
+<h1>CrystalDiskMark </h1>
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+    <th id="indexbarcolor">PC</th>
+      <th id="indexbarcolor">Read</th>
+      <th id="indexbarcolor">Write</th>
+      <th id="indexbarcolor">Random read 512K</th>
+      <th id="indexbarcolor">andom write 512K</th>
+      <th id="indexbarcolor">Random read 4K</th>
+      <th id="indexbarcolor">Random write 4K</th>
+      <th id="indexbarcolor">Random read QD32 4K</th>
+      <th id="indexbarcolor">Random write QD32 4K</th>
+      <th  id="indexbarcolor" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>1</th>
+        <td><%= @handy.cdmread %></td>
+        <td><%= @handy.cdmwrite %></td>
+        <td><%= @handy.rdr512  %></td>
+        <td><%= @handy.rdw512 %></td>
+        <td><%= @handy.rdr4k %></td>
+        <td><%= @handy.rdw4k %></td>
+        <td><%= @handy.rdrqd324k %></td>
+        <td><%= @handy.rdwqd324k %></td>
+        <t
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>2</th>
+        <td><%= @handy.pc2cdmread %></td>
+        <td><%= @handy.pc2cdmwrite %></td>
+        <td><%= @handy.pc2rdr512  %></td>
+        <td><%= @handy.pc2rdw512 %></td>
+        <td><%= @handy.pc2rdr4k %></td>
+        <td><%= @handy.pc2rdw4k %></td>
+        <td><%= @handy.pc2rdrqd324k %></td>
+        <td><%= @handy.pc2rdwqd324k %></td>
+       
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>3</th>
+        <td><%= @handy.pc3cdmread %></td>
+        <td><%= @handy.pc3cdmwrite %></td>
+        <td><%= @handy.pc3rdr512  %></td>
+        <td><%= @handy.pc3rdw512 %></td>
+        <td><%= @handy.pc3rdr4k %></td>
+        <td><%= @handy.pc3rdw4k %></td>
+        <td><%= @handy.pc3rdrqd324k %></td>
+        <td><%= @handy.pc3rdwqd324k %></td>
+        
+</tr>
+</tbody>
+</table>
+
+-->
+
+<table> 
+<h1>Benchmark</h1>
+<td><%= link_to image_tag(@handy.image1.url(:thumb)), @handy.image1.url %></td>
+
+
+<td><%= link_to image_tag(@handy.image2.url(:thumb)), @handy.image2.url %></td>
+
+<td><%= link_to image_tag(@handy.image3.url(:thumb)), @handy.image3.url %></td>
+
+<td><%= link_to image_tag(@handy.image4.url(:thumb)), @handy.image4.url %></td>
+</table>
+
+<font size= "20" ><%= link_to 'Edit', edit_handy_path(@handy) %></font> <font size= "20" >|</font>
+<font size= "20" ><%= link_to 'Back', handies_path %></font>
+
+
+<div style="margin-bottom: 150px;">
+  
+</div>

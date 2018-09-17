@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :contacts
-  
+
+  resources :handies do
+  	collection { post :import , :report}
+end
+
   root to: 'posts#index'
 
   devise_for :users, controllers: { registrations: 'devise_for_users/registrations', passwords: 'devise_for_users/passwords', confirmations: 'devise_for_users/confirmations' }

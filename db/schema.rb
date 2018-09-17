@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180905184350) do
+ActiveRecord::Schema.define(version: 20180917104713) do
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "data_file_name", null: false
@@ -41,6 +41,136 @@ ActiveRecord::Schema.define(version: 20180905184350) do
     t.text "messge"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "handies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "item"
+    t.integer "pccitem"
+    t.date "receivedate"
+    t.date "startdate"
+    t.date "finishdate"
+    t.string "solution"
+    t.text "schedule"
+    t.string "capacity"
+    t.string "qual"
+    t.float "read", limit: 24
+    t.float "write", limit: 24
+    t.string "owner"
+    t.string "prodname"
+    t.text "desc"
+    t.string "prodpn"
+    t.text "fwvversion"
+    t.string "ftype"
+    t.string "pcbvers"
+    t.string "testres"
+    t.string "expl"
+    t.string "rpname"
+    t.date "rpdate"
+    t.text "approvename"
+    t.text "explain"
+    t.text "remark"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "pc1os"
+    t.text "pc1mb"
+    t.text "pc1vendor"
+    t.text "pc1chip"
+    t.text "pc1bios"
+    t.text "pc1basic"
+    t.text "pc1comp32"
+    t.text "pc1burnin"
+    t.text "pc1fat"
+    t.text "pc1fat32"
+    t.text "pc1ntfs"
+    t.text "pc1exfat"
+    t.text "pc1result"
+    t.text "pc1led"
+    t.string "pc2os"
+    t.string "pc2mb"
+    t.string "pc2vendor"
+    t.string "pc2chip"
+    t.string "pc2bios"
+    t.string "pc2basic"
+    t.string "pc2comp32"
+    t.string "pc2burnin"
+    t.string "pc2fat"
+    t.string "pc2fat32"
+    t.string "pc2ntfs"
+    t.string "pc2exfat"
+    t.string "pc2result"
+    t.string "pc2led"
+    t.string "pc3os"
+    t.string "pc3mb"
+    t.string "pc3vendor"
+    t.string "pc3chip"
+    t.string "pc3bios"
+    t.string "pc3basic"
+    t.string "pc3comp32"
+    t.string "pc3burnin"
+    t.string "pc3fat"
+    t.string "pc3fat32"
+    t.string "pc3ntfs"
+    t.string "pc3exfat"
+    t.string "pc3result"
+    t.string "pc3led"
+    t.string "pc4os"
+    t.string "pc4mb"
+    t.string "pc4vendor"
+    t.string "pc4chip"
+    t.string "pc4bios"
+    t.string "pc4basic"
+    t.string "pc4ext34"
+    t.string "pc4result"
+    t.string "pc4led"
+    t.string "pc5os"
+    t.string "pc5mb"
+    t.string "pc5vendor"
+    t.string "pc5chip"
+    t.string "pc5bios"
+    t.string "pc5basic"
+    t.string "pc5result"
+    t.string "pc5led"
+    t.string "image1_file_name"
+    t.string "image1_content_type"
+    t.bigint "image1_file_size"
+    t.datetime "image1_updated_at"
+    t.string "image2_file_name"
+    t.string "image2_content_type"
+    t.bigint "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string "image3_file_name"
+    t.string "image3_content_type"
+    t.bigint "image3_file_size"
+    t.datetime "image3_updated_at"
+    t.string "image4_file_name"
+    t.string "image4_content_type"
+    t.bigint "image4_file_size"
+    t.datetime "image4_updated_at"
+    t.float "cdmread", limit: 24
+    t.float "cdmwrite", limit: 24
+    t.float "rdr512", limit: 24
+    t.float "rdw512", limit: 24
+    t.float "rdr4k", limit: 24
+    t.float "rdw4k", limit: 24
+    t.float "rdrqd324k", limit: 24
+    t.float "rdwqd324k", limit: 24
+    t.float "pc2cdmread", limit: 24
+    t.float "pc2cdmwrite", limit: 24
+    t.float "pc2rdr512", limit: 24
+    t.float "pc2rdw512", limit: 24
+    t.float "pc2rdr4k", limit: 24
+    t.float "pc2rdw4k", limit: 24
+    t.float "pc2rdrqd324k", limit: 24
+    t.float "pc2rdwqd324k", limit: 24
+    t.float "pc3cdmread", limit: 24
+    t.float "pc3cdmwrite", limit: 24
+    t.float "pc3rdr512", limit: 24
+    t.float "pc3rdw512", limit: 24
+    t.float "pc3rdr4k", limit: 24
+    t.float "pc3rdw4k", limit: 24
+    t.float "pc3rdrqd324k", limit: 24
+    t.float "pc3rdwqd324k", limit: 24
+    t.integer "user_id"
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

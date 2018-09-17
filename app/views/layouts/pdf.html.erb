@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title></title>
+        <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+<style>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+
+#qualreport{
+    text-align: right;
+    background-color: #black;
+    color: #white;
+}
+
+#compatibility {
+    text-align: center;
+    color: blue;
+}
+#text-center {
+    text-align: center;
+}
+
+#text-cent-col-bord {
+    text-align: center;
+    background-color: #cccccc;
+    border:1px solid black;
+}
+#desc{
+    font-size:x-large;
+    font-weight:bold;
+    padding-bottom: 10px;
+    padding-left: 80px;
+}
+
+#descline{
+    border-bottom-width:thin;
+    border-bottom-style:solid;
+    position: fixed;
+    border-bottom: 2px solid;
+    width: 300px;
+}
+
+#tablecolor{
+    background-color: #cccccc;
+}
+
+.colord6{
+    background-color: #cccccc;
+}
+div.static {
+    position: static;
+    border: 1px solid #000000;
+    text-align: center;
+    border-bottom: 1px;
+}
+
+#border1px {
+    border:1px solid black; 
+}
+
+ol.eng {
+    list-style-type: upper-alpha;
+}
+ol.dec {
+    list-style-type: decimal;
+}
+
+#bolder{
+    font-weight:bolder;
+    font-size: 20px;
+}
+li.height{
+    margin: 5px;
+}
+
+.margin5px{
+    margin: 5px;
+}
+
+.newroman{
+ font-family: "Times New Roman", Times, serif;
+}
+pre.newroman {
+    font-family: "Times New Roman", Times, serif;
+}
+
+</style>
+</head>
+<body>
+    <%= yield %>
+</body>
+</html>

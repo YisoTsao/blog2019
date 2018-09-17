@@ -1,0 +1,1007 @@
+<!--  page 1 Top --> 
+
+     <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+    
+<br><br>
+
+<h1 id="text-center">Product Qualification</h1>
+<br>
+<h1 id="compatibility">--- Compatibility Test ---</h1>
+
+<br><br>
+
+  <table style="width:50%;">
+  <tr>
+  <td id="desc" style="font-size:20px;" >Product Name:</td>
+  <td id="descline" ><%= @handy.prodname %></td>
+  </tr>
+  <tr>
+    <td id="desc" style="font-size:20px;" >Product P/N:</td>
+    <td id="descline" ><%= @handy.prodpn %></td>
+  </tr>
+   <tr>
+    <td id="desc" style="font-size:20px;" >Firmware Version:</td>
+    <td id="descline"><%= @handy.fwvversion %></td>
+  </tr>
+   <tr>
+    <td id="desc" style="font-size:20px;" > Description:</td>
+    <td id="descline" ><%= @handy.desc %></td>
+  </tr>
+   <tr>
+    <td id="desc" style="font-size:20px;" > Controller:</td>
+    <td id="descline" style="padding-top: 10px;"><%= @handy.solution %></td>
+  </tr>
+   <tr>
+    <td id="desc"style="font-size:20px;"  >Flash Type:</td>
+    <td id="descline"><%= @handy.ftype %></td>
+  </tr>
+   <tr>
+    <td id="desc" style="font-size:20px;" >PCB Version:</td>
+    <td id="descline" style="padding-top: 10px;"><%= @handy.pcbvers %></td>
+  </tr>
+   <tr>
+    <td id="desc" style="font-size:20px;" >Qualification:</td>
+    <td id="descline"><%= @handy.qual %></td>
+  </tr>
+   <tr>
+    <td id="desc" style="font-size:20px;" >Test Result:</td>
+    <td id="descline"><%= @handy.testres %></td>
+  </tr>
+   <tr>
+    <td id="desc" style="font-size:20px;" >Explain:</td>
+    <td id="descline"><%= @handy.prodname %> <%= @handy.capacity %> <%= @handy.qual %> <%= @handy.solution %> <%=@handy.ftype %></td>
+  </tr>
+  </table>
+
+    <br><br><br><br><br><br><br><br>
+
+  <div style="font-weight:bold;" id="tablecolor" class="static">
+  APPROVAL
+  </div>
+<table style="border-collapse:collapse;width: 100%;text-align:center;border:1px solid black;font-weight:bold; ">
+ <tr style="border:1px solid black;text-align:center;" id="tablecolor ">
+
+    <td id="border1px">QT</td>
+    <td id="border1px">Date</td>
+    <td id="border1px">Signature</td>
+    <td id="border1px">Approved by</td>
+    <td id="border1px">Date</td>
+    <td id="border1px">Signature</td>
+  </tr>
+  <tr style="border: 1px solid black;text-align: center;">
+    <td style="border:1px solid black;height:40px;"><%= @handy.rpname %></td>
+    <td id="border1px"><%= @handy.rpdate%></td>
+    <td id="border1px"><%= @handy.rpname%></td>
+    <td id="border1px"><%= @handy.approvename %></td>
+    <td id="border1px"><%= @handy.rpdate%></td>
+    <td id="border1px"><%= @handy.approvename%></td>
+  </tr>
+</table>
+<p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+<pre>Form No: APA-RD-00001-F05-1                  1</pre>
+     <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 1 Bottom -->
+<!--  page 2 Top -->
+
+      <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+<p style="text-align:center;text-decoration:underline;">Table Of Content</p>
+
+<div id="bolder">SUMMARY RESULT</div>
+<ol class="eng" class="height">
+  <li id="bolder">Function Test With M/B :<%= @handy.pc1mb%></li>
+    <ol class="dec"> 
+      <li class="height">Basic Function Test</li>
+      <li class="height">Format Test</li>
+      <li class="height">Burn In Test</li>
+      <li class="height">Read/ Write Speed Test</li>
+      <li class="height">Test Result</li>
+  </ol>
+    
+  <li id="bolder">Function Test With M/B :<%= @handy.pc2mb%></li>
+  <ol class="dec">
+      <li class="height">Basic Function Test</li>
+      <li class="height">Format Test</li>
+      <li class="height">Burn In Test</li>
+      <li class="height">Read/ Write Speed Test</li>
+      <li class="height">Test Result</li>
+      </ol>
+   
+  <li id="bolder">Function Test With M/B :<%= @handy.pc3mb%></li>
+  <ol class="dec">
+      <li class="height">Basic Function Test</li>
+      <li class="height">Format Test</li>
+      <li class="height">Burn In Test</li>
+      <li class="height">Read/ Write Speed Test</li>
+      <li class="height">Test Result</li>
+  </ol>
+
+  <li id="bolder">Function Test With <%= @handy.pc4os%></li>
+  <ol class="dec">
+      <li class="height">Basic Function Test</li>
+      <li class="height">Format Test</li>
+      <li class="height">Read/ Write Speed Test</li>
+      <li class="height">Test Result</li>
+  </ol>
+  <li id="bolder">Function Test With <%= @handy.pc5mb%></li>
+  <ol class="dec">
+      <li class="height">Basic Function Test</li>
+      <li class="height">Test Result</li>
+  </ol>
+      <li id="bolder">Platform Compatibility Test :</li>
+      <li id="bolder">Additional Qualification :</li>
+  <ol class="dec">
+      <li class="height">Environmental</li>
+      <li class="height">Certification</li>
+  </ol>
+  </ol>
+
+
+<br><br><br><br><br><br><br><br>
+    <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+    <pre>Form No: APA-RD-00001-F05-1                  2</pre>
+    <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+<!--  page 2 Bottom -->
+<!--  page 3 Top -->
+
+     <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+
+<div id="bolder">SUMMARY RESULT</div>
+
+<table style="border-collapse:collapse;text-align:center;border:1px solid black;" >
+ <tr id="border1px" >
+    <td colspan="2" class="colord6">  </td>
+    <td id="border1px" class="colord6"><b>PC1</b></td>
+    <td id="border1px" class="colord6"><b>PC2</b></td>
+    <td id="border1px" class="colord6"><b>PC3</b></td>
+    <td id="border1px" class="colord6"><b>PC4</b></td>
+    <td id="border1px" class="colord6"><b>PC5</b></td>
+  </tr>
+  <tr id="border1px">
+    <td colspan="2" id="border1px">Testing Product</td>
+    <td colspan="5" id="border1px"><%= @handy.desc %></td>
+  </tr>
+  <tr id="border1px">
+    <td colspan="2" id="border1px">System</td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc3os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc4os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc5os%></td>
+  </tr>
+  <tr id="border1px" id="border1px">
+    <td rowspan="4"  id="border1px">MB</td>
+    <td id="border1px">Name</td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc3mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc4mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc5mb %></td>
+  </tr>
+  <tr id="border1px" >
+    <td id="border1px">Vendor</td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1vendor %></td>
+    <td id="border1px"><%= @handy.pc2vendor %></td>
+    <td id="border1px"><%= @handy.pc3vendor %></td>
+    <td id="border1px"><%= @handy.pc4vendor %></td>
+    <td id="border1px"><%= @handy.pc5vendor %></td>
+  </tr>
+  <tr id="border1px" >
+    <td id="border1px">Chipset</td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc3chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc4chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc5chip %></td>
+  </tr>
+    <tr id="border1px" >
+    <td id="border1px">BIOS</td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1bios%></td>
+    <td id="border1px"><%= @handy.pc2bios%></td>
+    <td id="border1px"><%= @handy.pc3bios%></td>
+    <td id="border1px"><%= @handy.pc4bios%></td>
+    <td id="border1px"><%= @handy.pc5bios%></td>
+  </tr id="border1px" >
+  <tr id="border1px" >
+    <td colspan="7" class="colord6"><b>Test Result</b></td>
+  </tr>
+   <tr id="border1px" >
+    <td colspan="2"  id="border1px">Basic Function Test</td>
+    <td id="border1px"><%= @handy.pc1basic %></td>
+    <td id="border1px"><%= @handy.pc2basic %></td>
+    <td id="border1px"><%= @handy.pc3basic %></td>
+    <td id="border1px"><%= @handy.pc4basic %></td>
+    <td id="border1px"><%= @handy.pc5basic %></td>
+  </tr>
+   <tr id="border1px" >
+    <td rowspan="2"  >Burn In Test</td>
+    <td id="border1px" >Comp32</td>
+    <td id="border1px"><%= @handy.pc1comp32 %></td>
+    <td id="border1px"><%= @handy.pc2comp32 %> </td>
+    <td id="border1px"><%= @handy.pc3comp32 %></td>
+    <td id="border1px"> </td>
+    <td id="border1px"> </td>
+  </tr>
+   <tr id="border1px" >
+    <td  id="border1px">BurnIn test </td>
+    <td id="border1px"><%= @handy.pc1burnin %></td>
+    <td id="border1px"><%= @handy.pc2burnin %></td>
+    <td id="border1px"><%= @handy.pc3burnin %></td>
+    <td id="border1px"> </td>
+    <td id="border1px"> </td>
+  </tr>
+  <tr >
+    <td colspan="7" style="text-align: left;" ><b>Remark:</b></td>
+  </tr>
+   <tr  >
+    <td colspan="7" style="text-align: center;"><b>Test Result - <%= @handy.testres %> </b></td>
+  </tr>
+</table>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+      <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+      <pre>Form No: APA-RD-00001-F05-1                  3</pre>
+      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 3 Bottom -->
+<!--  page 4 Top --> 
+       <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+
+<p id="bolder">A.  Function Test With M/B : <%= @handy.pc1mb%></p>
+<table style="width:100%;border-collapse:collapse;" >
+<tr id="border1px" >
+  <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+</tr>
+
+<tr >
+  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
+  <td >Brand: <%= @handy.pc1vendor%></td>
+  <td >Chipset: <%= @handy.pc1chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc1bios %></td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+  <td>M/B: <%= @handy.pc1mb %></td>
+  <td colspan="2" style="border-right: 1px solid black;"></td>
+  <td></td>
+</tr>
+</table>
+<ol>
+<li>Basic Function Test
+<table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:20%;"></td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
+     <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
+     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord"><%= @handy.pc1os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td>
+  </tr>
+</table>
+</li>
+<li style="padding-top: 15px;">Format Test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:25%;"></td>
+      <td id="text-cent-col-bord" style="width:20%;">FAT</td>
+      <td id="text-cent-col-bord" style="width:20%;">FAT32</td>
+      <td id="text-cent-col-bord" style="width:20%;">NTFS</td>
+      <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc1os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1fat %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1fat32 %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1ntfs %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1exfat %></td>
+    </tr>
+   
+  </table>
+</li>
+<li style="padding-top: 15px;">Burn in test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width: 25%;"></td>
+      <td id="text-cent-col-bord" style="width: 35%;">Comp32 15hrs</td>
+      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord"><%= @handy.pc1os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1comp32%></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1burnin%></td>
+    </tr>
+    
+    </table>
+    <li style="padding-top: 15px;"> Read/ Write Speed Test
+      <!-- <p><%= wicked_pdf_image_tag @handy.image.url(:medium) %></p> -->
+      <table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
+      <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:20%;" rowspan=2></td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;" colspan="8" >Crystal DiskMark3.01b
+Speed Test Unit =MB/s</td> 
+    
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Read</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Write</td>
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 512K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 512K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord"><%= @handy.pc1os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.cdmread %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.cdmwrite %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.rdr112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdw112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdr4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdw4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdrqd324k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdwqd324k %></td>
+  </tr>
+</table>
+    </li>
+    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
+    <li style="padding-top: 15px;">Test Result
+       <tr  >
+    <td  style="text-align: left;"><%= @handy.pc1result %></td>
+      </tr>
+    </li>
+    </table>
+</li>
+</ol>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+      <pre>Form No: APA-RD-00001-F05-1                  4</pre>
+      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 4 Bottom -->
+<!--  page 5 Top --> 
+
+      <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+
+<p id="bolder">B.  Function Test With M/B : <%= @handy.pc2mb%></p>
+<table style="width:100%;border-collapse:collapse;" >
+<tr id="border1px" >
+  <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+</tr>
+
+<tr >
+  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
+  <td >Brand: <%= @handy.pc2vendor%></td>
+  <td >Chipset: <%= @handy.pc2chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc2bios %></td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+  <td>M/B: <%= @handy.pc2mb %></td>
+  <td colspan="2" style="border-right: 1px solid black;"></td>
+  <td></td>
+</tr>
+</table>
+<ol>
+<li >Basic Function Test
+<table style="border-collapse:collapse;border: 1px solid black;">  
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:20%;"></td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
+     <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
+     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord"><%= @handy.pc2os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td>
+  </tr>
+</table>
+</li>
+<li style="padding-top: 15px;">Format Test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:25%;"></td>
+      <td id="text-cent-col-bord" style="width:20%;">FAT</td>
+      <td id="text-cent-col-bord" style="width:20%;">FAT32</td>
+      <td id="text-cent-col-bord" style="width:20%;">NTFS</td>
+      <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc2os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2fat %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2fat32 %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2ntfs %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2exfat %></td>
+    </tr>
+   
+  </table>
+</li>
+<li style="padding-top: 15px;">Burn in test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width: 25%;"></td>
+      <td id="text-cent-col-bord" style="width: 35%;">Comp32 15hrs</td>
+      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord"><%= @handy.pc2os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2comp32%></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2burnin%></td>
+    </tr>
+    
+    </table>
+    <li style="padding-top: 15px;"> Read/ Write Speed Test
+      <!-- <p><%= wicked_pdf_image_tag @handy.image1.url(:medium) %></p> -->
+    </li>
+     <table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
+      <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:20%;" rowspan=2></td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;" colspan="8" >Crystal DiskMark3.01b
+Speed Test Unit =MB/s</td> 
+    
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Read</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Write</td>
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 512K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 512K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+  <td id="text-cent-col-bord"><%= @handy.pc2os %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2cdmread %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2cdmwrite %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdr112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdw112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdr4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdw4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdrqd324k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdwqd324k %></td>
+  </tr>
+</table>
+    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
+    <li style="padding-top: 15px;">Test Result
+       <tr  >
+    <td  style="text-align: left;"><%= @handy.pc2result %></td>
+      </tr>
+    </li>
+    </table>
+</li>
+</ol>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+      <pre>Form No: APA-RD-00001-F05-1                  5</pre>
+      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 5 Bottom -->
+<!--  page 6 Top --> 
+
+     <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+
+<p id="bolder">C.  Function Test With M/B : <%= @handy.pc3mb%></p>
+<table style="width:100%;border-collapse:collapse;" >
+<tr id="border1px" >
+  <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+</tr>
+
+<tr >
+  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
+  <td >Brand: <%= @handy.pc3vendor%></td>
+  <td >Chipset: <%= @handy.pc3chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc3bios %></td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+  <td>M/B: <%= @handy.pc3mb %></td>
+  <td colspan="2" style="border-right: 1px solid black;"></td>
+  <td></td>
+</tr>
+</table>
+<ol>
+<li>Basic Function Test
+<table style="border-collapse:collapse;border: 1px solid black;">  
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:20%;"></td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
+     <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
+     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord"><%= @handy.pc3os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td>
+  </tr>
+</table>
+</li>
+<li style="padding-top: 15px;">Format Test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:25%;"></td>
+      <td id="text-cent-col-bord" style="width:20%;">FAT</td>
+      <td id="text-cent-col-bord" style="width:20%;">FAT32</td>
+      <td id="text-cent-col-bord" style="width:20%;">NTFS</td>
+      <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc3os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc3fat %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc3fat32 %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc3ntfs %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc3exfat %></td>
+    </tr>
+   
+  </table>
+</li>
+<li style="padding-top: 10px;">Burn in test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width: 25%;"></td>
+      <td id="text-cent-col-bord" style="width: 35%;">Comp32 15hrs</td>
+      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord"><%= @handy.pc3os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc3comp32 %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc3burnin %></td>
+    </tr>
+    
+    </table>
+    <li style="padding-top: 10px;"> Read/ Write Speed Test
+      <!-- <p><%= wicked_pdf_image_tag @handy.image2.url(:medium) %></p> -->
+    </li>
+     <table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
+      <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:20%;" rowspan=2></td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;" colspan="8" >Crystal DiskMark3.01b
+Speed Test Unit =MB/s</td> 
+    
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Read</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Write</td>
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 512K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 512K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td> 
+     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord"><%= @handy.pc3os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3cdmread %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3cdmwrite %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3rdr112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3rdw112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3rdr4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3rdw4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3rdrqd324k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc3rdwqd324k %></td>
+  </tr>
+</table>
+    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
+    <li style="padding-top: 10px;">Test Result
+       <tr  >
+    <td  style="text-align: left;"><%= @handy.pc3result %></td>
+      </tr>
+    </li>
+    </table>
+</li>
+</ol>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+  <pre>Form No: APA-RD-00001-F05-1                  6</pre>
+     <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 6 Bottom -->
+<!--  page 7 Top --> 
+
+     <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+
+<p id="bolder" >D.  Function Test With: <%= @handy.pc4os%></p>
+<table style="width:100%;border-collapse:collapse;" >
+<tr id="border1px" >
+  <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+</tr>
+
+<tr >
+  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
+  <td >Brand: <%= @handy.pc4vendor%></td>
+  <td >Chipset: <%= @handy.pc4chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc4bios %></td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+  <td>M/B: <%= @handy.pc4mb %></td>
+  <td colspan="2" style="border-right: 1px solid black;">Testing Software: Ubuntu 14.04</td>
+  <td></td>
+</tr>
+</table>
+<ol>
+<li>Basic Function Test
+<table style="border-collapse:collapse;border: 1px solid black;">  
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:20%;"></td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
+     <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
+     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord"><%= @handy.pc4os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td>
+  </tr>
+</table>
+</li>
+<li style="padding-top: 15px;">Format Test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:25%;"></td>
+      <td id="text-cent-col-bord" style="width:20%;">ext3</td>
+      <td id="text-cent-col-bord" style="width:20%;">ext4</td>
+      
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width:25%;"><%= @handy.pc4os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc4ext34 %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc4ext34 %></td>
+      
+    </tr>
+  </table>
+</li>
+    <li style="padding-top: 15px;"> Read/ Write Speed Test
+      <p><%= wicked_pdf_image_tag @handy.image3.url(:medium) %></p>
+    </li>
+    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
+    <li style="padding-top: 15px;">Test Result
+       <tr  >
+    <td  style="text-align: left;"><%= @handy.pc4result %></td>
+      </tr>
+    </li>
+    </table>
+</li>
+</ol>
+
+<br>
+  
+  <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+  <pre>Form No: APA-RD-00001-F05-1                  7</pre>
+     <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 7 Bottom -->
+<!--  page 8 Top --> 
+
+     <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+
+<p id="bolder" >E.  Function Test With : <%= @handy.pc5mb%></p>
+<table style="width:100%;border-collapse:collapse;" >
+<tr id="border1px" >
+  <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+</tr>
+
+<tr >
+  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
+  <td >Brand: <%= @handy.pc5vendor%></td>
+  <td ></td>
+  <td style="border-right: 1px solid black;"></td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+  <td>M/B: <%= @handy.pc5mb %></td>
+  <td colspan="2" style="border-right: 1px solid black;"> </td>
+  <td></td>
+</tr>
+</table>
+<ol>
+<li>Basic Function Test
+<table style="border-collapse:collapse;border: 1px solid black;">  
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:13%;"></td> 
+     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
+     <td id="text-cent-col-bord" style="width:10%;">Sleep</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
+     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord">Result</td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc5led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
+  </tr>
+</table>
+</li>
+    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
+    <li>Test Result
+       <tr  >
+    <td  style="text-align: left;"><%= @handy.pc5result %></td>
+      </tr>
+    </li>
+    </table>
+</li>
+</ol>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+  <br><br>
+  <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+  <pre>Form No: APA-RD-00001-F05-1                  8</pre>
+     <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 8 Bottom -->
+<!--  page 9 Top --> 
+
+      <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+<p id="bolder" >F.  Platform Compatibility Test</p>
+
+<table style="border-collapse:collapse;border: 1px solid black;">  
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:50%;" colspan="4">Platform Information</td> 
+     <td id="text-cent-col-bord" style="width:50%;" colspan="6"> Test Item</td> 
+      
+
+  </tr>
+    <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:12.5%;">Chipset</td> 
+     <td id="text-cent-col-bord" style="width:12.5%;">M/B</td> 
+     <td id="text-cent-col-bord" style="width:12.5%;">Interface</td>
+     <td id="text-cent-col-bord" style="width:12.5%;">System</td> 
+     <td id="text-cent-col-bord" style="width:9%;">Format</td> 
+     <td id="text-cent-col-bord" style="width:9%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:9%;">Delete</td> 
+     <td id="text-cent-col-bord" style="width:9%;">Compare</td>  
+     <td id="text-cent-col-bord" style="width:9%;">Restart</td>  
+     <td id="text-cent-col-bord" style="width:9%;">Suspend</td>  
+
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >Intel H97</td> 
+     <td id="text-cent-col-bord" >Asus H97-PRO GAMER</td>
+     <td id="text-cent-col-bord" >USB 2.0</td> 
+     <td id="text-cent-col-bord" >Win 7</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+  <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >Intel Z97</td> 
+     <td id="text-cent-col-bord" >Asus Z97-A/USB 3.1</td>
+     <td id="text-cent-col-bord" >USB 3.0</td> 
+     <td id="text-cent-col-bord" >Win 10</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+   <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >AMD Sempron</td> 
+     <td id="text-cent-col-bord" >Asus AM1M-A</td>
+     <td id="text-cent-col-bord" >USB 2.0</td> 
+     <td id="text-cent-col-bord" >Win 8.1</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+   <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >Intel X99</td> 
+     <td id="text-cent-col-bord" >Gigabyte X99-UD4</td>
+     <td id="text-cent-col-bord" >USB 3.0</td> 
+     <td id="text-cent-col-bord" >Ubuntu 14.04</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+   <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >--</td> 
+     <td id="text-cent-col-bord" >Apple Mac Book Air 11-inch</td>
+     <td id="text-cent-col-bord" >USB 3.0</td> 
+     <td id="text-cent-col-bord" >Mac OS X Lion 10.7.4</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+   <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >AMD 780G+SB700</td> 
+     <td id="text-cent-col-bord" >Asus M3A78-EM</td>
+     <td id="text-cent-col-bord" >USB 2.0</td> 
+     <td id="text-cent-col-bord" >Win XP</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+   <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >AMD A85X</td> 
+     <td id="text-cent-col-bord" >Gigabyte F2A85XM-HD3</td>
+     <td id="text-cent-col-bord" >USB 2.0</td> 
+     <td id="text-cent-col-bord" >Win 7</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+   <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >Intel Z170</td> 
+     <td id="text-cent-col-bord" >Asus Z170-A</td>
+     <td id="text-cent-col-bord" >USB 2.0</td> 
+     <td id="text-cent-col-bord" >Win 10</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+   <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" >Intel Z87</td> 
+     <td id="text-cent-col-bord" >Msi Z87M GAMING</td>
+     <td id="text-cent-col-bord" >USB 2.0</td> 
+     <td id="text-cent-col-bord" >Win 7</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+  </tr>
+</table>
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+
+
+  
+      <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
+      <pre>Form No: APA-RD-00001-F05-1                  9</pre>
+      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+
+<!--  page 9 Bottom -->
+<!--  page 10 Top --> 
+
+     <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
+
+<p id="bolder" >G.  Additional Qualification:</p>
+
+<ol>
+  <li>Environmental</li>
+<pre class="newroman" style="margin : -12px;">
+  <ol >
+  <li style="margin : -12px;">RoHS Standard :                                        <u>2011/65/EU , 2015/863/EU</u></li>
+  <li style="margin : -12px;">Other Environmental Standard :                <u>EC/1907/2006</u></li>
+  <li style="margin : -12px;">WEEE (By Product) :                               <u>2012/19/EU</u></li>
+  <li style="margin : -12px;">Battery Standard :                                     <u>2006/66/EC</u></li>
+  <li style="margin : -12px;">Packing Standard :                                    <u>94/62/EC</u></li>
+  <li style="margin : -12px;">Others :                                                     <u>CHINA RoHS MII#39</u></li>
+  </ol>
+</pre>
+<br>
+<li >Certification </li>
+  <pre class="newroman" style="margin : -12px;">
+  <ol>
+    <li style="margin : -12px;">CE: NO.<u>                                                                                        </u></li>
+    <li style="margin : -12px;">FCC: NO.<u>                                                                                      </u></li>
+    <li style="margin : -12px;">BSMI: NO.<u>                                                                                    </u></li>
+    <li style="margin : -12px;">VCCI: NO.<u>                                                                                    </u></li>
+    <li style="margin : -12px;">C-tick: NO.<u>                                                                                    </u></li>
+    <li style="margin : -12px;">Other: <u>                                                                                            </u></li>  
+  </ol>
+  </ol>
+  
+</pre>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <p style="border-bottom-style:solid;border-bottom: 2px solid;padding-bottom: 8px;"></p>
+    <pre>Form No: APA-RD-00001-F05-1                  10</pre>
+     <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
+<!--  page 10 Bottom -->
+
+</tbody>
+</table>
+

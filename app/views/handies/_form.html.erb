@@ -1,0 +1,496 @@
+<%= form_for @handy, html: { multipart: true } do |form| %>
+<p class="imagefont">
+  <table >
+    <tr>
+      <td>PC1 CDM</td>
+      <td><%= form.file_field :image1 %></td>
+    </tr>
+    <tr>
+      <td>PC2 CDM</td>
+      <td><%= form.file_field :image2 %></td>
+    </tr>
+    <tr>
+      <td>PC3 CDM</td>
+      <td><%= form.file_field :image3 %></td>
+    </tr>
+    <tr>
+      <td>Benchmark</td>
+      <td><%= form.file_field :image4 %></td>
+    </tr>
+  </table>
+
+  <%= form_for(handy) do |f| %>
+  <% if handy.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(handy.errors.count, "error") %> prohibited this handy from being saved:</h2>
+    <ul>
+      <% handy.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <h1>Product</h1>
+  <br>
+  <table style="width:50%;">
+    <tr >
+      <td style="width:100px;">Item:</td>
+      <td style="width:80%;"><%= form.number_field :item, class: "form-control" %></td>
+    </tr>
+    <tr >
+      <td  >PCC Item:</td>
+      <td  ><%= form.number_field :pccitem, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  >Schedule:</td>
+      <td  ><%= form.text_field :schedule, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  >Receive Date:</td>
+      <td  ><%= form.text_field :receivedate, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  >Product P/N:</td>
+      <td ><%= form.text_field :prodpn, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  > Controller:</td>
+      <td ><%= form.text_field :solution, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  > Flash:</td>
+      <td ><%= form.text_field :ftype, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  >Description:</td>
+      <td ><%= form.text_field :desc, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  >Capacity:</td>
+      <td ><%= form.text_field :capacity, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  >PCB Version:</td>
+      <td ><%= form.text_field :fwvversion, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td  >Qualification:</td>
+      <td ><%= form.text_field :qual, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Start date:</td>
+      <td ><%= form.text_field :startdate, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Finish date:</td>
+      <td ><%= form.text_field :finishdate, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Test Result:</td>
+      <td ><%= form.text_field :testres, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Owner:</td>
+      <td ><%= form.text_field :owner, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Remark:</td>
+      <td ><%= form.text_field :remark, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Product Name:</td>
+      <td ><%= form.text_field :prodname, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PCB Version:</td>
+      <td ><%= form.text_field :pcbvers, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Report Name:</td>
+      <td ><%= form.text_field :rpname, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Report Date:</td>
+      <td ><%= form.text_field :rpdate, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Approve Name:</td>
+      <td ><%= form.text_field :approvename, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Read:</td>
+      <td ><%= form.text_field :read, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Write:</td>
+      <td ><%= form.text_field :write, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >Explain:</td>
+      <td ><%= form.text_field :expl, class: "form-control" %></td>
+    </tr>
+  </table>
+
+  <h1>PC1</h1>
+  <table style="width:50%;">
+    <tr>
+      <td style="width:100px;">PC1 OS:</td>
+      <td style="width:80%;"><%= form.text_field :pc1os, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 M/B :</td>
+      <td ><%= form.text_field :pc1mb, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 Vendor:</td>
+      <td ><%= form.text_field :pc1vendor, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 Chip:</td>
+      <td ><%= form.text_field :pc1chip, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 Bios:</td>
+      <td ><%= form.text_field :pc1bios, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 Basic:</td>
+      <td ><%= form.text_field :pc1basic, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 LED:</td>
+      <td ><%= form.text_field :pc1led, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 Comp32:</td>
+      <td ><%= form.text_field :pc1comp32, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 Burnin:</td>
+      <td ><%= form.text_field :pc1burnin, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 FAT:</td>
+      <td ><%= form.text_field :pc1fat, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 FAT32:</td>
+      <td ><%= form.text_field :pc1fat32, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 NTFS:</td>
+      <td ><%= form.text_field :pc1ntfs, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 exFAT:</td>
+      <td ><%= form.text_field :pc1exfat, class: "form-control" %></td>
+    </tr>
+    <!-- 
+    <tr>
+      <td >PC1 CDM Read:</td>
+      <td ><%= form.text_field :cdmread, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 CDM Write:</td>
+      <td ><%= form.text_field :cdmwrite, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 CDM Read 512:</td>
+      <td ><%= form.text_field :rdr512, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 CDM Write 512:</td>
+      <td ><%= form.text_field :rdw512, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 CDM Random Read 4K:</td>
+      <td ><%= form.text_field :rdr4k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 CDM Random Write 4K:</td>
+      <td ><%= form.text_field :rdw4k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 CDM Random Read QD32 4K:</td>
+      <td ><%= form.text_field :rdrqd324k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC1 CDM Random Write QD324K:</td>
+      <td ><%= form.text_field :rdwqd324k, class: "form-control" %></td>
+    </tr>
+    -->
+    <tr>
+      <td >PC1 Result:</td>
+      <td ><%= form.text_field :pc1result, class: "form-control" %></td>
+    </tr> 
+  </table>
+
+  <h1>PC2</h1>
+  <table style="width:50%;">
+    <tr>
+      <td style="width:100px;">PC2 OS:</td>
+      <td style="width:80%;"><%= form.text_field :pc2os, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 M/B :</td>
+      <td ><%= form.text_field :pc2mb, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 Vendor:</td>
+      <td ><%= form.text_field :pc2vendor, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 Chip:</td>
+      <td ><%= form.text_field :pc2chip, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 Bios:</td>
+      <td ><%= form.text_field :pc2bios, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 Basic:</td>
+      <td ><%= form.text_field :pc2basic, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 LED:</td>
+      <td ><%= form.text_field :pc2led, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 Comp32:</td>
+      <td ><%= form.text_field :pc2comp32, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 Burnin:</td>
+      <td ><%= form.text_field :pc2burnin, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 FAT:</td>
+      <td ><%= form.text_field :pc2fat, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 FAT32:</td>
+      <td ><%= form.text_field :pc2fat32, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 NTFS:</td>
+      <td ><%= form.text_field :pc2ntfs, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 exFAT:</td>
+      <td ><%= form.text_field :pc2exfat, class: "form-control" %></td>
+    </tr>
+    <!--
+    <tr>
+      <td >PC2 CDM Read:</td>
+      <td ><%= form.text_field :pc2cdmread, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 CDM Write:</td>
+      <td ><%= form.text_field :pc2cdmwrite, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 CDM Read 512:</td>
+      <td ><%= form.text_field :pc2rdr512, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 CDM Write 512:</td>
+      <td ><%= form.text_field :pc2rdw512, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 CDM Random Read 4K:</td>
+      <td ><%= form.text_field :pc2rdr4k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 CDM Random Write 4K:</td>
+      <td ><%= form.text_field :pc2rdw4k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 CDM Random Read QD32 4K:</td>
+      <td ><%= form.text_field :pc2rdrqd324k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC2 CDM Random Write QD324K:</td>
+      <td ><%= form.text_field :pc2rdwqd324k, class: "form-control" %></td>
+    </tr>
+    -->
+    <tr>
+      <td >PC2 Result:</td>
+      <td ><%= form.text_field :pc2result, class: "form-control" %></td>
+    </tr>
+  </table>
+  <h1>PC3</h1>
+
+  <table style="width:50%;">
+    <tr>
+      <td style="width:100px;">PC3 OS:</td>
+      <td style="width:80%;"><%= form.text_field :pc3os, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 M/B :</td>
+      <td ><%= form.text_field :pc3mb, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 Vendor:</td>
+      <td ><%= form.text_field :pc3vendor, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 Chip:</td>
+      <td ><%= form.text_field :pc3chip, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 Bios:</td>
+      <td ><%= form.text_field :pc3bios, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 Basic:</td>
+      <td ><%= form.text_field :pc3basic, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 LED:</td>
+      <td ><%= form.text_field :pc3led, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 Comp32:</td>
+      <td ><%= form.text_field :pc3comp32, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 Burnin:</td>
+      <td ><%= form.text_field :pc3burnin, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 FAT:</td>
+      <td ><%= form.text_field :pc3fat, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 FAT32:</td>
+      <td ><%= form.text_field :pc3fat32, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 NTFS:</td>
+      <td ><%= form.text_field :pc3ntfs, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 exFAT:</td>
+      <td ><%= form.text_field :pc3exfat, class: "form-control" %></td>
+    </tr>
+    <!--
+    <tr>
+      <td >PC3 CDM Read:</td>
+      <td ><%= form.text_field :pc3cdmread, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 CDM Write:</td>
+      <td ><%= form.text_field :pc3cdmwrite, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 CDM Read 512:</td>
+      <td ><%= form.text_field :pc3rdr512, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 CDM Write 512:</td>
+      <td ><%= form.text_field :pc3rdw512, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 CDM Random Read 4K:</td>
+      <td ><%= form.text_field :pc3rdr4k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 CDM Random Write 4K:</td>
+      <td ><%= form.text_field :pc3rdw4k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 CDM Random Read QD32 4K:</td>
+      <td ><%= form.text_field :pc3rdrqd324k, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC3 CDM Random Write QD324K:</td>
+      <td ><%= form.text_field :pc3rdwqd324k, class: "form-control" %></td>
+    </tr>
+    -->
+    <tr>
+      <td >PC3 Result:</td>
+      <td ><%= form.text_field :pc3result, class: "form-control" %></td>
+    </tr>
+  </table>
+  
+  <h1>PC4</h1>
+  <table style="width:50%;">
+    <tr>
+      <td style="width:100px;">PC4 OS:</td>
+      <td style="width:80%;"><%= form.text_field :pc4os, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 M/B :</td>
+      <td ><%= form.text_field :pc4mb, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 Vendor:</td>
+      <td ><%= form.text_field :pc4vendor, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 Chip:</td>
+      <td ><%= form.text_field :pc4chip, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 Bios:</td>
+      <td ><%= form.text_field :pc4bios, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 Basic:</td>
+      <td ><%= form.text_field :pc4basic, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 LED:</td>
+      <td ><%= form.text_field :pc4led, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 ext34:</td>
+      <td ><%= form.text_field :pc4ext34, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC4 Result:</td>
+      <td ><%= form.text_field :pc4result, class: "form-control" %></td>
+    </tr>
+  </table>
+  <h1>PC5</h1>
+  <table style="width:50%;">
+    <tr>
+      <td style="width:100px;">PC5 OS:</td>
+      <td style="width:80%;"><%= form.text_field :pc5os, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC5 M/B :</td>
+      <td ><%= form.text_field :pc5mb, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC5 Vendor:</td>
+      <td ><%= form.text_field :pc5vendor, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC5 Chip:</td>
+      <td ><%= form.text_field :pc5chip, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC5 Bios:</td>
+      <td ><%= form.text_field :pc5bios, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC5 Basic:</td>
+      <td ><%= form.text_field :pc5basic, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC5 LED:</td>
+      <td ><%= form.text_field :pc5led, class: "form-control" %></td>
+    </tr>
+    <tr>
+      <td >PC5 Result:</td>
+      <td ><%= form.text_field :pc5result, class: "form-control" %></td>
+    </tr>
+  </table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+  <% end %>
+  <% end %>
