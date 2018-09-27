@@ -16,4 +16,5 @@
 //= require bootstrap
 //= require ckeditor/init
 //= require bootstrap/alert
+//= require typeahead.bundle
 //= require_tree .

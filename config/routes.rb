@@ -7,8 +7,11 @@ Rails.application.routes.draw do
   resources :contacts
 
   resources :handies do
-  	collection { post :import , :report}
-end
+    collection do
+      post :import , :report
+      get :autocomplete
+    end
+  end
 
   root to: 'posts#index'
 

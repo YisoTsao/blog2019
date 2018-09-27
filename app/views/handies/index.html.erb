@@ -1,233 +1,228 @@
 <p id="notice"><%= notice %></p>
-
-
 <h1 style="padding-top: 50px;">Handy Product</h1>
-<%= form_tag handies_path, :method => :get do %>
-  
-    <%= text_field_tag :search, params[:search] , class: "search" %>
-    <%= submit_tag "Search ", :name => nil  %>
+<%= form_tag handies_path, :method => :get, class: "form-inline" do %>
+<div class="input-group">
+  <%= text_field_tag :search,
+    params[:search] ,
+    id: 'handies_search',
+    autocomplete: :off,
+    placeholder: 'Search',
+    class: 'form-control'%>
+  <div class="input-group-btn search-panel">
+    <%= link_to 'Clear', handies_url, class: "btn btn-default" %>
+    <%= submit_tag "Search ", :name => nil, class: "btn btn-default"  %>
+  </div>
+</div>
 <% end %>
-
-
-
 <div class="media">
-    <div class="media-body">
-      <table class="table table-hover" >
-  <thead>
-    <tr>
-      <!-- <th>Item</th>
-      <th>Pccitem</th> -->
-      <th>Receivedate</th>
-      <th>Startdate</th>
-      <th>Finishdate</th>
-      <th>Solution</th>
-      <th >Flash</th>
-      <th>Schedule</th>
-      <th>Capacity</th>
-      <th>Qual</th>
-      <th>Read</th>
-      <th>Write</th>
-      <th>Owner</th>
-      <th>Result</th>      
-      <th>Remark</th>
-      <th id="hide">ID</th>
-      <th id="hide">prodname</th>
-      <th id="hide">desc</th>
-      <th id="hide">prodpn</th>
-      <th id="hide">fwvversion</th>
-      <th id="hide">pcbvers</th>
-      <th id="hide">expl</th>
-      <th id="hide">rpname</th>
-      <th id="hide">rpdate</th>
-      <th id="hide">approvename</th>
-      <th id="hide">pc1os</th>
-      <th id="hide">pc1mb</th>
-      <th id="hide">pc1vendor</th>
-      <th id="hide">pc1chip</th>
-      <th id="hide">pc1bios</th>
-      <th id="hide">pc1basic</th>
-      <th id="hide">pc1comp32</th>
-      <th id="hide">pc1burnin</th>
-      <th id="hide">pc1fat</th>
-      <th id="hide">pc1fat32</th>
-      <th id="hide">pc1ntfs</th>
-      <th id="hide">pc1exfat</th>
-      <th id="hide">pc1result</th>
-      <th id="hide">pc1ntfs</th>
-      <th id="hide">pc1led</th>
-      <th id="hide">pc2os</th>
-      <th id="hide">pc2mb</th>
-      <th id="hide">pc2vendor</th>
-      <th id="hide">pc2chip</th>
-      <th id="hide">pc2bios</th>
-      <th id="hide">pc2basic</th>
-      <th id="hide">pc2comp32</th>
-      <th id="hide">pc2burnin</th>
-      <th id="hide">pc2fat</th>
-      <th id="hide">pc2fat32</th>
-      <th id="hide">pc2ntfs</th>
-      <th id="hide">pc2exfat</th>
-      <th id="hide">pc2result</th>
-      <th id="hide">pc2led</th>
-      <th id="hide">pc3os</th>
-      <th id="hide">pc3mb</th>
-      <th id="hide">pc3vendor</th>
-      <th id="hide">pc3chip</th>
-      <th id="hide">pc3bios</th>
-      <th id="hide">pc3basic</th>
-      <th id="hide">pc3comp32</th>
-      <th id="hide">pc2burnin</th>
-      <th id="hide">pc3fat</th>
-      <th id="hide">pc3fat32</th>
-      <th id="hide">pc3ntfs</th>
-      <th id="hide">pc3exfat</th>
-      <th id="hide">pc3result</th>
-      <th id="hide">pc3led</th>
-      <th id="hide">pc4os</th>
-      <th id="hide">pc4mb</th>
-      <th id="hide">pc4vendor</th>
-      <th id="hide">pc4chip</th>
-      <th id="hide">pc4bios</th>
-      <th id="hide">pc4basic</th>
-      <th id="hide">pc4ext34</th>
-      <th id="hide">pc4result</th>
-      <th id="hide">pc4led</th>
-      <th id="hide">pc5os</th>
-      <th id="hide">pc5mb</th>
-      <th id="hide">pc5vendor</th>
-      <th id="hide">pc5chip</th>
-      <th id="hide">pc5bios</th>
-      <th id="hide">pc5basic</th>
-      <th id="hide">pc5result</th>
-      <th id="hide">pc5led</th>
-     
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody id="sortable" >
-    <% @handies.each do |handy| %>
-      <tr>
-        <!-- <td><%= handy.item %></td>
-        <td><%= handy.pccitem %></td> -->
-        <td><%= handy.receivedate  %></td>
-        <td><%= handy.startdate %></td>
-        <td><%= handy.finishdate %></td>
-        <td><%= handy.solution %></td>
-        <th ><%= handy.ftype %></th>
-        <td><%= handy.schedule %></td>
-        <td><%= handy.capacity %></td>
-        <td><%= handy.qual %></td>
-        <td><%= handy.read %></td>
-        <td><%= handy.write %></td>
-        <td><%= handy.owner %></td>
-        <th><%= handy.testres %></th>
-        <td><%= handy.remark %></td>
-        <td id="hide"><%=  handy.id %></td>
-       <th id="hide"><%= handy.prodname %></th>
-      <th id="hide"><%= handy.desc %></th>
-      <th id="hide"><%= handy.prodpn %></th>
-      <th id="hide"><%= handy.fwvversion %></th>
-      <th id="hide"><%= handy.pcbvers %></th>
-      <th id="hide"><%= handy.expl %></th>
-      <th id="hide"><%= handy.rpname %></th>
-      <th id="hide"><%= handy.rpdate %></th>
-      <th id="hide"><%= handy.approvename %></th>
-      <th id="hide"><%= handy.pc1os %></th>
-      <th id="hide"><%= handy.pc1mb %></th>
-      <th id="hide"><%= handy.pc1vendor %></th>
-      <th id="hide"><%= handy.pc1chip %></th>
-      <th id="hide"><%= handy.pc1bios %></th>
-      <th id="hide"><%= handy.pc1basic %></th>
-      <th id="hide"><%= handy.pc1comp32 %></th>
-      <th id="hide"><%= handy.pc1burnin %></th>
-      <th id="hide"><%= handy.pc1fat %></th>
-      <th id="hide"><%= handy.pc1fat32 %></th>
-      <th id="hide"><%= handy.pc1ntfs %></th>
-      <th id="hide"><%= handy.pc1exfat %></th>
-      <th id="hide"><%= handy.pc1result %></th>
-      <th id="hide"><%= handy.pc1led %></th>
-       <th id="hide"><%= handy.pc2os %></th>
-      <th id="hide"><%= handy.pc2mb %></th>
-      <th id="hide"><%= handy.pc2vendor %></th>
-      <th id="hide"><%= handy.pc2chip %></th>
-      <th id="hide"><%= handy.pc2bios %></th>
-      <th id="hide"><%= handy.pc2basic %></th>
-      <th id="hide"><%= handy.pc2comp32 %></th>
-      <th id="hide"><%= handy.pc2burnin %></th>
-      <th id="hide"><%= handy.pc2fat %></th>
-      <th id="hide"><%= handy.pc2fat32 %></th>
-      <th id="hide"><%= handy.pc2ntfs %></th>
-      <th id="hide"><%= handy.pc2exfat %></th>
-      <th id="hide"><%= handy.pc2result %></th>
-      <th id="hide"><%= handy.pc2led %></th>
-      <th id="hide"><%= handy.pc3os %></th>
-      <th id="hide"><%= handy.pc3mb %></th>
-      <th id="hide"><%= handy.pc3vendor %></th>
-      <th id="hide"><%= handy.pc3chip %></th>
-      <th id="hide"><%= handy.pc3bios %></th>
-      <th id="hide"><%= handy.pc3basic %></th>
-      <th id="hide"><%= handy.pc3comp32 %></th>
-      <th id="hide"><%= handy.pc3burnin %></th>
-      <th id="hide"><%= handy.pc3fat %></th>
-      <th id="hide"><%= handy.pc3fat32 %></th>
-      <th id="hide"><%= handy.pc3ntfs %></th>
-      <th id="hide"><%= handy.pc3exfat %></th>
-      <th id="hide"><%= handy.pc3result %></th>
-      <th id="hide"><%= handy.pc3led %></th>
-      <th id="hide"><%= handy.pc4os %></th>
-      <th id="hide"><%= handy.pc4mb %></th>
-      <th id="hide"><%= handy.pc4vendor %></th>
-      <th id="hide"><%= handy.pc4chip %></th>
-      <th id="hide"><%= handy.pc4bios %></th>
-      <th id="hide"><%= handy.pc4basic %></th>
-      <th id="hide"><%= handy.pc4ext34 %></th>
-      <th id="hide"><%= handy.pc4result %></th>
-      <th id="hide"><%= handy.pc4led %></th>
-      <th id="hide"><%= handy.pc5os %></th>
-      <th id="hide"><%= handy.pc5mb %></th>
-      <th id="hide"><%= handy.pc5vendor %></th>
-      <th id="hide"><%= handy.pc5chip %></th>
-      <th id="hide"><%= handy.pc5bios %></th>
-      <th id="hide"><%= handy.pc5basic %></th>
-      <th id="hide"><%= handy.pc5result %></th>
-      <th id="hide"><%= handy.pc5led %></th>
-
-     
-      <!-- -->
-      <% if current_user  %>
-        <td><%= link_to 'Show', handy , class: 'btn btn-mini btn-default' , :style => 'text-decoration:none;'%></td>
-        <td><%= link_to 'Edit', edit_handy_path(handy) , class: 'btn btn-mini btn-primary' , :style => 'text-decoration:none;' %></td>
-        <td><%= link_to 'Destroy', handy, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-mini btn-danger' , :style => 'text-decoration:none;'%></td>
-      </tr>
-    <% end %>
+  <div class="media-body">
+    <table class="table table-hover" >
+      <thead>
+        <tr>
+          <!-- <th>Item</th>
+          <th>Pccitem</th> -->
+          <th>Receivedate</th>
+          <th>Startdate</th>
+          <th>Finishdate</th>
+          <th>Solution</th>
+          <th >Flash</th>
+          <th>Schedule</th>
+          <th>Capacity</th>
+          <th>Qual</th>
+          <th>Read</th>
+          <th>Write</th>
+          <th>Owner</th>
+          <th>Result</th>
+          <th>Remark</th>
+          <th id="hide">ID</th>
+          <th id="hide">prodname</th>
+          <th id="hide">desc</th>
+          <th id="hide">prodpn</th>
+          <th id="hide">fwvversion</th>
+          <th id="hide">pcbvers</th>
+          <th id="hide">expl</th>
+          <th id="hide">rpname</th>
+          <th id="hide">rpdate</th>
+          <th id="hide">approvename</th>
+          <th id="hide">pc1os</th>
+          <th id="hide">pc1mb</th>
+          <th id="hide">pc1vendor</th>
+          <th id="hide">pc1chip</th>
+          <th id="hide">pc1bios</th>
+          <th id="hide">pc1basic</th>
+          <th id="hide">pc1comp32</th>
+          <th id="hide">pc1burnin</th>
+          <th id="hide">pc1fat</th>
+          <th id="hide">pc1fat32</th>
+          <th id="hide">pc1ntfs</th>
+          <th id="hide">pc1exfat</th>
+          <th id="hide">pc1result</th>
+          <th id="hide">pc1ntfs</th>
+          <th id="hide">pc1led</th>
+          <th id="hide">pc2os</th>
+          <th id="hide">pc2mb</th>
+          <th id="hide">pc2vendor</th>
+          <th id="hide">pc2chip</th>
+          <th id="hide">pc2bios</th>
+          <th id="hide">pc2basic</th>
+          <th id="hide">pc2comp32</th>
+          <th id="hide">pc2burnin</th>
+          <th id="hide">pc2fat</th>
+          <th id="hide">pc2fat32</th>
+          <th id="hide">pc2ntfs</th>
+          <th id="hide">pc2exfat</th>
+          <th id="hide">pc2result</th>
+          <th id="hide">pc2led</th>
+          <th id="hide">pc3os</th>
+          <th id="hide">pc3mb</th>
+          <th id="hide">pc3vendor</th>
+          <th id="hide">pc3chip</th>
+          <th id="hide">pc3bios</th>
+          <th id="hide">pc3basic</th>
+          <th id="hide">pc3comp32</th>
+          <th id="hide">pc2burnin</th>
+          <th id="hide">pc3fat</th>
+          <th id="hide">pc3fat32</th>
+          <th id="hide">pc3ntfs</th>
+          <th id="hide">pc3exfat</th>
+          <th id="hide">pc3result</th>
+          <th id="hide">pc3led</th>
+          <th id="hide">pc4os</th>
+          <th id="hide">pc4mb</th>
+          <th id="hide">pc4vendor</th>
+          <th id="hide">pc4chip</th>
+          <th id="hide">pc4bios</th>
+          <th id="hide">pc4basic</th>
+          <th id="hide">pc4ext34</th>
+          <th id="hide">pc4result</th>
+          <th id="hide">pc4led</th>
+          <th id="hide">pc5os</th>
+          <th id="hide">pc5mb</th>
+          <th id="hide">pc5vendor</th>
+          <th id="hide">pc5chip</th>
+          <th id="hide">pc5bios</th>
+          <th id="hide">pc5basic</th>
+          <th id="hide">pc5result</th>
+          <th id="hide">pc5led</th>
+          
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody id="sortable" >
+        <% @handies.each do |handy| %>
+        <tr>
+          <!-- <td><%= handy.item %></td>
+          <td><%= handy.pccitem %></td> -->
+          <td><%= handy.receivedate  %></td>
+          <td><%= handy.startdate %></td>
+          <td><%= handy.finishdate %></td>
+          <td><%= handy.solution %></td>
+          <th ><%= handy.ftype %></th>
+          <td><%= handy.schedule %></td>
+          <td><%= handy.capacity %></td>
+          <td><%= handy.qual %></td>
+          <td><%= handy.read %></td>
+          <td><%= handy.write %></td>
+          <td><%= handy.owner %></td>
+          <th><%= handy.testres %></th>
+          <td><%= handy.remark %></td>
+          <td id="hide"><%=  handy.id %></td>
+          <th id="hide"><%= handy.prodname %></th>
+          <th id="hide"><%= handy.desc %></th>
+          <th id="hide"><%= handy.prodpn %></th>
+          <th id="hide"><%= handy.fwvversion %></th>
+          <th id="hide"><%= handy.pcbvers %></th>
+          <th id="hide"><%= handy.expl %></th>
+          <th id="hide"><%= handy.rpname %></th>
+          <th id="hide"><%= handy.rpdate %></th>
+          <th id="hide"><%= handy.approvename %></th>
+          <th id="hide"><%= handy.pc1os %></th>
+          <th id="hide"><%= handy.pc1mb %></th>
+          <th id="hide"><%= handy.pc1vendor %></th>
+          <th id="hide"><%= handy.pc1chip %></th>
+          <th id="hide"><%= handy.pc1bios %></th>
+          <th id="hide"><%= handy.pc1basic %></th>
+          <th id="hide"><%= handy.pc1comp32 %></th>
+          <th id="hide"><%= handy.pc1burnin %></th>
+          <th id="hide"><%= handy.pc1fat %></th>
+          <th id="hide"><%= handy.pc1fat32 %></th>
+          <th id="hide"><%= handy.pc1ntfs %></th>
+          <th id="hide"><%= handy.pc1exfat %></th>
+          <th id="hide"><%= handy.pc1result %></th>
+          <th id="hide"><%= handy.pc1led %></th>
+          <th id="hide"><%= handy.pc2os %></th>
+          <th id="hide"><%= handy.pc2mb %></th>
+          <th id="hide"><%= handy.pc2vendor %></th>
+          <th id="hide"><%= handy.pc2chip %></th>
+          <th id="hide"><%= handy.pc2bios %></th>
+          <th id="hide"><%= handy.pc2basic %></th>
+          <th id="hide"><%= handy.pc2comp32 %></th>
+          <th id="hide"><%= handy.pc2burnin %></th>
+          <th id="hide"><%= handy.pc2fat %></th>
+          <th id="hide"><%= handy.pc2fat32 %></th>
+          <th id="hide"><%= handy.pc2ntfs %></th>
+          <th id="hide"><%= handy.pc2exfat %></th>
+          <th id="hide"><%= handy.pc2result %></th>
+          <th id="hide"><%= handy.pc2led %></th>
+          <th id="hide"><%= handy.pc3os %></th>
+          <th id="hide"><%= handy.pc3mb %></th>
+          <th id="hide"><%= handy.pc3vendor %></th>
+          <th id="hide"><%= handy.pc3chip %></th>
+          <th id="hide"><%= handy.pc3bios %></th>
+          <th id="hide"><%= handy.pc3basic %></th>
+          <th id="hide"><%= handy.pc3comp32 %></th>
+          <th id="hide"><%= handy.pc3burnin %></th>
+          <th id="hide"><%= handy.pc3fat %></th>
+          <th id="hide"><%= handy.pc3fat32 %></th>
+          <th id="hide"><%= handy.pc3ntfs %></th>
+          <th id="hide"><%= handy.pc3exfat %></th>
+          <th id="hide"><%= handy.pc3result %></th>
+          <th id="hide"><%= handy.pc3led %></th>
+          <th id="hide"><%= handy.pc4os %></th>
+          <th id="hide"><%= handy.pc4mb %></th>
+          <th id="hide"><%= handy.pc4vendor %></th>
+          <th id="hide"><%= handy.pc4chip %></th>
+          <th id="hide"><%= handy.pc4bios %></th>
+          <th id="hide"><%= handy.pc4basic %></th>
+          <th id="hide"><%= handy.pc4ext34 %></th>
+          <th id="hide"><%= handy.pc4result %></th>
+          <th id="hide"><%= handy.pc4led %></th>
+          <th id="hide"><%= handy.pc5os %></th>
+          <th id="hide"><%= handy.pc5mb %></th>
+          <th id="hide"><%= handy.pc5vendor %></th>
+          <th id="hide"><%= handy.pc5chip %></th>
+          <th id="hide"><%= handy.pc5bios %></th>
+          <th id="hide"><%= handy.pc5basic %></th>
+          <th id="hide"><%= handy.pc5result %></th>
+          <th id="hide"><%= handy.pc5led %></th>
+          
+          <!-- -->
+          <% if current_user  %>
+          <td><%= link_to 'Show', handy , class: 'btn btn-mini btn-default' , :style => 'text-decoration:none;'%></td>
+          <td><%= link_to 'Edit', edit_handy_path(handy) , class: 'btn btn-mini btn-primary' , :style => 'text-decoration:none;' %></td>
+          <td><%= link_to 'Destroy', handy, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-mini btn-danger' , :style => 'text-decoration:none;'%></td>
+        </tr>
         <% end %>
-  </tbody>
-</table>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
-</div>
-
 <br>
 
-
-<%= link_to 'Create new item', new_handy_path , class: 'btn btn-default' , :style => 'text-decoration:none;'%> 
-
-
+<div style="text-align: center;">
+<%= will_paginate @handies %>
+</div>
+<%= link_to 'Create new item', new_handy_path , class: 'btn btn-default' , :style => 'text-decoration:none;'%>
 <h3>Import CSV file</h3>
 <%= form_tag  import_handies_path , multipart: true do %>
-<%= file_field_tag :file %>
-<%= submit_tag "Upload CSV file"  , class: 'btn btn-default'%>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload CSV file"  , class: 'btn btn-default'%>
 <% end %>
-
-
-
 <h3>Export file </h3>
 <%= link_to 'Download CSV', handies_path(format: "csv") , class: 'btn btn-default' , :style => 'text-decoration:none;'%> |
 <%= link_to "Download Excel", handies_path(format: "xls") , class: 'btn btn-default' , :style => 'text-decoration:none;'%>
-
-
 <br><br>
-
 <div style="margin-bottom: 150px;">
   
 </div>

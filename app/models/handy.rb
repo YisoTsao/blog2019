@@ -1,5 +1,17 @@
 class Handy < ApplicationRecord
-  belongs_to :user , optional: true
+	belongs_to :user , optional: true
+	searchkick  word_start: [:solution, :capacity, :ftype, :schedule, :finishdate , :qual]
+
+  def search_data
+    {
+      solution: solution,
+      capacity: capacity,
+      ftype: ftype,
+      schedule: schedule,
+			finishdate: finishdate,
+      qual: qual
+    }
+  end
 
   has_attached_file :image1,
     styles:

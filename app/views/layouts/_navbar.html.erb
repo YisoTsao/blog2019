@@ -14,7 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Blog", posts_path %><span class="sr-only"></span></li>
+        <li><%= link_to "Blog", posts_path %></li>
         <li><%= link_to "Contact", new_contact_path  %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Work<span class="caret"></span></a>
@@ -30,10 +30,12 @@
         </li>
       </ul>
       <form class="navbar-form navbar-left">
+        <!--
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
+        -->
       </form>
       <%= form_for(:user, url:  session_path(:user)) do |f| %>
       <ul class="nav navbar-nav navbar-right">
@@ -55,12 +57,14 @@
                 <li>
                   <div class="row" style="margin-bottom: 25px;">
                     <div class="col-md-12">
-                      Login via
+                       輸入帳號密碼
+                       <!--
                       <div class="social-buttons">
                         <a id="checkLoginState" onclick="checkLoginState();" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                         <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                       </div>
                       or
+                      -->
                       <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
                         <div class="form-group">
                           <%= f.text_field :email, class: "form-control", placeholder: "Email address"%>
@@ -82,7 +86,7 @@
                           <%= link_to "編輯使用者帳號", edit_user_registration_path, class: "btn btn-default btn-block" %>
                         </div>
                         <label>
-                          <%= f.check_box :remember_me %> keep me logged-in.
+                          <%= f.check_box :remember_me %> 保持登入
                         </label>
                       </div>
                     </form>

@@ -4,10 +4,10 @@ class HandiesController < ApplicationController
   
   def index
     if params[:search]
-      @handies = Handy.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
-          finishdate LIKE ? OR schedule LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ?',
-                             "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
-                             "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+      @handies = Handy.where('ftype LIKE ? OR pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
+				finishdate LIKE ? OR schedule LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ?',
+				"%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
+				"%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%").paginate(page:params[:page])
     else
       @handies = Handy.all
       respond_to do |format|
@@ -16,9 +16,29 @@ class HandiesController < ApplicationController
         format.csv { send_data @handies.to_csv }
         format.xls { send_data @handies.to_csv }
       end
-      #@handies = Handy.paginate(page:params[:page], per_page: 30 )
+       @handies = Handy.paginate(page:params[:page], per_page: 30 )
     end
+
+    # search = params[:search].present? ? params[:search] : nil
+    # @handies = if search
+    #   #Handy.where("capacity LIKE ? OR qual LIKE ?", "%#{search}%", "%#{search}%")
+    #   Handy.search(search)
+    # else
+    #   Handy.all
+    # end
   end
+
+  def autocomplete
+    render json: Handy.search(params[:query], {
+      fields: ["solution", "capacity", "ftype", "schedule", "finishdate", "qual"],
+      match: :word_start,
+      limit: 10,
+      load: false,
+      misspellings: {below: 10}
+    }).map(&:ftype)
+  end
+
+
 
   def show
     respond_to do |format|
