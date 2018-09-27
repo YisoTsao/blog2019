@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
 	before_action :set_contact , only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user! , except: [:new]
+
 	def index
 		@contacts = Contact.all
 	end
@@ -32,8 +34,9 @@ class ContactsController < ApplicationController
 		respond_to do  |format|
 		if @contact.save
 			ContactMailer.registration_confimation(@contact).deliver
-			format.html{ redirect_to @contact, notice: 'Contact was successfully created.' }
+			format.html{ redirect_to new_contact_path}
 			format.json{ render :show , status: :created, location: @contact }
+			flash[:info] = "信件已發送!"
 		else
 			format.html{ render :new }
 			format.json{ render :json , @contact.errors, status: :unprocessable_entiry}
