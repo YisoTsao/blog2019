@@ -12,6 +12,8 @@ end
 
   root to: 'posts#index'
 
+  post "/callbacks/webhook", to: "callbacks#webhook"
+
   devise_for :users, controllers: { registrations: 'devise_for_users/registrations', passwords: 'devise_for_users/passwords', confirmations: 'devise_for_users/confirmations' }
 
 end

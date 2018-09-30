@@ -49,6 +49,8 @@ gem 'pry'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem "paperclip"
+gem 'line-bot-api'
+gem 'localtunnel' # Local Web Server Accessible Online
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
