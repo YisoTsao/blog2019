@@ -52,6 +52,8 @@ gem 'elasticsearch-rails'
 gem 'elasticsearch-model'
 gem 'will_paginate', '~> 3.1.0'
 gem 'searchkick'
+gem 'line-bot-api'
+gem 'localtunnel' # Local Web Server Accessible Online
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
