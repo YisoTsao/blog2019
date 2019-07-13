@@ -4,8 +4,8 @@ class CallbacksController < ApplicationController
 
   def line
     @line ||= Line::Bot::Client.new { |config|
-      config.channel_secret = ENV["9e0b3be6a24f3881c3adef2337ca2669"]
-      config.channel_token = ENV["fURUMSvTkCRztbz+o9Rt5IvUMB4m9XogzBGANfuXQqA6o4hdEYuOOQTgFCapHIE1mY4HABjsulAcpmj78Ool9KQTW3v7STSfWYMyuZog46j9MSCquC4VTqlXXAR4F8b2GJ0KSMD66v+Ofppjd72zUwdB04t89/1O/w1cDnyilFU="]
+      config.channel_secret = "9e0b3be6a24f3881c3adef2337ca2669"
+      config.channel_token = "fURUMSvTkCRztbz+o9Rt5IvUMB4m9XogzBGANfuXQqA6o4hdEYuOOQTgFCapHIE1mY4HABjsulAcpmj78Ool9KQTW3v7STSfWYMyuZog46j9MSCquC4VTqlXXAR4F8b2GJ0KSMD66v+Ofppjd72zUwdB04t89/1O/w1cDnyilFU="
     }
   end
 

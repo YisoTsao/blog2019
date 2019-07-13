@@ -12,4 +12,6 @@ class User < ApplicationRecord
   has_many :posts,    dependent: :destroy
   has_many :comments
   has_many :handies  
+  has_many :userprofiles
+  accepts_nested_attributes_for :userprofiles
 end

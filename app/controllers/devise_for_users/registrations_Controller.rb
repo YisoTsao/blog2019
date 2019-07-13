@@ -8,6 +8,6 @@ class DeviseForUsers::RegistrationsController < Devise::RegistrationsController
     :birth_day, :country_code, :qq, :webchat, :image ])
     #add below that can edit user profile
     devise_parameter_sanitizer.permit(:account_update, keys: [:account,:name,:click_id,:phone,:agree_terms, :id_number,
-    :birth_day, :country_code, :qq, :webchat, :image ])
+    :birth_day, :country_code, :qq, :webchat, :image, userprofile_attributes: [:phone, :birthday, :fb, :ig, :address, :addrcode]])
   end
 end

@@ -1,5 +1,5 @@
 <div class="col-md-8  col-md-offset-2" style="padding-top: 80px;">
-<%= form_for @post, html: { multipart: true }   do |t| %>
+<%= form_for setup_post(@post), html: { multipart: true }   do |t| %>
 	<% if @post.errors.any? %>
 	<div id="error_explanation">
 		<h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -10,7 +10,7 @@
 		</ul>
 	</div>
 	<% end %>
-	<%= t.submit "提交文章", class: 'btn btn-info', style: 'margin: 10px;' %>
+	
 	<div class="panel panel-default">
 		<div class="panel-heading"><h3 class="panel-title"><strong>編輯文章</strong></h3></div>
 		<div class="panel-body">
@@ -28,12 +28,19 @@
 			<label>
 				<%= t.check_box :remove_image %>移除標題圖片
 			</label>
+			<div>
+				<%= t.fields_for :starts do |s| %>
+				名稱：<%= s.text_field :main_post %>
+	     		敘述：<%= s.text_field :start %>
+	     		</div>
+     		<% end %>
 		</div>
 	</div>
 	<div class="panel panel-default">
 		<div class="panel-heading"><h3 class="panel-title"><strong>編輯內容</strong></h3></div>
 		<%= t.cktext_area :content %>
 	</div>
+	<%= t.submit "提交文章", class: 'btn btn-info', style: 'margin: 10px;' %>
 	<!-- <div class="fb-comments" data-href="https://ide.c9.io/gary525/garyblog" data-numposts="5"></div> -->
 	<% end %>
 </div>

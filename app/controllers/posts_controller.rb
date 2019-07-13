@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   def new
   	@post = Post.new
+    @post.starts.build
   end
 
   def create
@@ -43,6 +44,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post.starts.build
   end
 
   def update
@@ -62,7 +64,7 @@ class PostsController < ApplicationController
 
   private
 	def post_params
-	  params.require(:post).permit(:title, :content, :image, :remove_image)
+	  params.require(:post).permit(:title, :content, :image, :remove_image, starts_attributes: [:main_post, :start])
 	end
 
 	def find_post

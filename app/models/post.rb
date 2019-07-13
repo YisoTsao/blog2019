@@ -12,6 +12,9 @@ class Post < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   has_many :comments, dependent: :destroy
+  has_many :starts, dependent: :destroy
+  accepts_nested_attributes_for :starts, :allow_destroy => true, :reject_if => :all_blank
+  validates_associated :starts
   belongs_to :user
   
 end
