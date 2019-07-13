@@ -2,13 +2,13 @@
 lock "~> 3.10.1"
 
 set :application, "garybon"
-set :repo_url, "git@gitlab.com:YisoTsao/blog2019.git"
+set :repo_url, "https://github.com/YisoTsao/blog2019.git"
 
 append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
 
 #Deploy to Lindoe  
- set :deploy_to, "/var/gary/garybon"
+ set :deploy_to, "/var/www/garybon"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
