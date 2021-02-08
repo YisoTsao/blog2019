@@ -36,7 +36,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'ckeditor', github: 'galetahub/ckeditor'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 gem "devise"
 gem 'omniauth'
